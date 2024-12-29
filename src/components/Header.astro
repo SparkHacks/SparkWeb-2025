@@ -1,16 +1,18 @@
 ---
 const links = [
-  { name: 'Home', href: '#' },
+  { name: 'HackPack', href: '#' },
   { name: 'About', href: '#about' },
-  { name: 'Login', href: '#login' },
-  { name: 'Register', href: '#register' },
+  { name: 'Schedule', href: '#schedule' },
+  { name: 'Sponsors', href: '#sponsors' },
 ]
 ---
 
 <header
-  class="header flex flex-row items-center justify-between bg-blue-700 px-4 py-2 text-white"
+  class="header absolute z-40 w-full flex flex-row items-center justify-between bg-transparent px-4 py-2 text-white"
 >
-  <div class="text-lg">SparkHacks 2025</div>
+  <div class="text-lg">
+    <!-- <img src="./sparkhacks25logo.png"/> -->
+    SparkHacks 2025</div>
   <ul class="flex flex-row gap-10">
     {
       links.map((link) => (
@@ -19,5 +21,30 @@ const links = [
         </li>
       ))
     }
+    <li class="apply">
+      <a href="#apply">Apply</a>
+    </li>
   </ul>
 </header>
+
+<style>
+  .apply {
+    text-align: center;
+    width: 110px;
+    border-radius: 12px;
+    padding: 8px;
+    background-color: #092E41;
+    font-weight: bold;
+  }
+
+  .apply > a {
+    width: 100%;
+  }
+
+  li {
+    display: flex;
+    align-content: center;
+    flex-wrap: wrap;
+    font-weight: bold;
+  }
+</style>
