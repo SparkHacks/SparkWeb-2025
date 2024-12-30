@@ -1,0 +1,97 @@
+---
+const schedulingData = [
+  {
+    date: 'February 7th',
+    day: 'Friday',
+    events: [
+      {
+        time: '5:00 pm - 6:30 pm',
+        title: 'Check-In',
+      },
+      {
+        time: '6:00 pm - 6:30 pm',
+        title: 'Opening Ceremony',
+      },
+      {
+        time: '6:30 pm - 7:15 pm',
+        title: 'Workshop',
+      },
+      {
+        time: '7:30 pm - 8:15 pm',
+        title: 'Workshop',
+      },
+      {
+        time: '8:15 pm - 9:00 pm',
+        title: 'Dinner',
+      }
+    ],
+  },
+  {
+    date: 'February 8th',
+    day: 'Saturday',
+    events: [
+      {
+        time: '9:00 am - 10:30 am',
+        title: 'Check-In and Breakfast',
+      },
+      {
+        time: '11:00 am - 1:00 pm',
+        title: 'Destress Event',
+      },
+      {
+        time: '2:00 pm - 3:00 pm',
+        title: 'Lunch',
+      },
+      {
+        time: '6:30 pm',
+        title: 'Project Submission Deadline',
+      },
+      {
+        time: '6:35 pm - 7:00 pm',
+        title: 'Raffle Winners Announcement',
+      },
+      {
+        time: '7:00 pm - 8:00 pm',
+        title: 'Project Expo',
+      },
+      {
+        time: '8:00 pn - 9:15 pm',
+        title: 'Announcement of Winners & Closing Ceremony',
+      },
+      {
+        time: '9:15 pm',
+        title: 'Dinner & Meet the team',
+      },
+    ],
+  },
+]
+---
+
+<section
+  class="min-h-screen w-full content-center bg-blue-400 bg-[length:300px_300px] text-white"
+  id="schedule"
+>
+  <h1
+    class="z-[1] flex h-full w-full flex-col items-center justify-center gap-5 pt-20 text-3xl font-bold text-white md:flex-row"
+  >
+    Schedule
+  </h1>
+
+  <div class="my-10 flex flex-wrap justify-center gap-28">
+    {
+      schedulingData.map((day, i) => (
+        <div class="font-poppin flex w-[500px] flex-col rounded-[5px] border-4 bg-gradient-to-t from-[#181642] to-[#041D33] p-6 text-white border-none  backdrop-blur-[19.5px]">
+          <h1 class="text-3xl font-[700]">{day.date}</h1>
+          <h1 class="font-poppin mb-5 text-2xl font-[500]">{day.day}</h1>
+          <div class="flex flex-col gap-5">
+            {day.events.map((event, j) => (
+              <p class="text-lg">
+                <span class="font-extrabold">{event.time}</span> | {event.title}
+              </p>
+            ))}
+          </div>
+        </div>
+      ))
+    }
+  </div>
+</section>
