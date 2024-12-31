@@ -79,8 +79,10 @@ const schedulingData = [
 
   <div class="my-10 flex flex-wrap justify-center gap-28">
     {
+        
       schedulingData.map((day, i) => (
-        <div class="font-poppin flex w-[500px] flex-col rounded-[5px] border-4 bg-gradient-to-t from-[#181642] to-[#041D33] p-6 text-white border-none  backdrop-blur-[19.5px]">
+        <div class= "flex p-4 bg-no-repeat bg-[url('../public/outer.svg')]">
+        <div class="font-poppin flex w-[500px] flex-col rounded-[5px]  bg-[url('../public/inner.svg')] text-white border-none">
           <h1 class="text-3xl font-[700]">{day.date}</h1>
           <h1 class="font-poppin mb-5 text-2xl font-[500]">{day.day}</h1>
           <div class="flex flex-col gap-5">
@@ -91,6 +93,7 @@ const schedulingData = [
             ))}
           </div>
         </div>
+    </div>
       ))
     }
   </div>
