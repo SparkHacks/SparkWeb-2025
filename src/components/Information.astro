@@ -1,0 +1,40 @@
+---
+
+import Counter from '../components/Countdown';
+
+---
+
+<section class="min-h-screen w-full content-center bg-[length:300px_300px] text-white bg-purple-950" id="information">
+
+  <div class="flex my-10  justify-center gap-28">
+    <div class="flex-col flex" id="countdown">
+      <div class="flex flex-wrap justify-center gap-10">
+        <div class="flex animate-bounce" id="chest"></div>
+        <h1 class=" text-center font-poppin lg:text-[50px] 
+        text-3xl font-bold">
+          Opening In...</h1>
+        </div>
+    <Counter client:load/>
+  </div>
+
+  <div class="flex-col flex gap-[25px] justify-center">
+    <h1 class=" text-white text-center font-poppin lg:text-[50px] 
+    text-3xl font-bold">Resources & FAQ</h1>
+    <a href=" https://www.notion.so/HackPack-2025-16c1bf81ade280e9b4f6ea19a572a181?pvs=4" target="_blank" class="mt-5 bg-[url('../public/faqback.svg')] backdrop-blur-[19.5px] h-[100px] w-[300px] flex justify-center items-center flex-col ">
+      <h1 class="text-white text-md font-poppin">Click to view</h1>
+      <h1 class="text-white text-2xl font-poppin">Hack Pack</h1>
+    </a>
+  </div>
+ 
+  </div>
+  
+</section>
+
+<style>
+  #chest {
+   background: url('../public/chest.svg'); 
+   width: 75px;
+   height: 75px;
+   background-repeat: no-repeat;
+   background-size: 75px;
+  }
