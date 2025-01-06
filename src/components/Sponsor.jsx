@@ -3,23 +3,23 @@ import { motion  } from 'framer-motion';
 const sponsors = [
   {
     name: "CME Group",
-    image: "../public/sponsorLogo/cmegroup.svg",
+    image: "../sponsorLogo/cmegroup.svg",
   },
   {
     name: "UIC CS Department",
-    image: "../public/sponsorLogo/uicengineering.svg",
+    image: "../sponsorLogo/uicengineering.svg",
   },
   {
     name: "John Deere",
-    image: "../public/sponsorLogo/johndeere.svg",
+    image: "../sponsorLogo/johndeere.svg",
   },
   {
     name: "Grainger",
-    image: "../public/sponsorLogo/grainger.svg",
+    image: "../sponsorLogo/grainger.svg",
   },
   {
     name: "Fulcrum",
-    image: "../public/sponsorLogo/fulcrum.svg",
+    image: "../sponsorLogo/fulcrum.svg",
   },
 ]
 
@@ -64,7 +64,7 @@ export default function Sponsor(){
           )}
       
       </motion.div>
-      <div className='w-full h-full'>
+      {/* <div className='w-full h-full'>
         <div className='absolute overflow-x-hidden w-full h-[250px]'>
           <motion.img 
           initial={{ x: 0 }}
@@ -80,7 +80,7 @@ export default function Sponsor(){
           viewport={{ once: true }}
           src="/helicopter.png" alt="" className="absolute w-[150px] -bottom-0 opacity-60 -left-[150px]"/>
         </div>
-      </div>
+      </div> */}
     </section>
   )
 }
