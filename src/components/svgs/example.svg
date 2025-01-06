@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="200"
+  height="200"
+  viewBox="0 0 200 200"
+>
+  <!-- Background Circle -->
+  <circle cx="100" cy="100" r="100" fill="#f0f0f0" />
+
+  <!-- Colored Circle -->
+  <circle cx="100" cy="100" r="80" fill="orange" stroke="black" stroke-width="5" />
+
+  <!-- Text Label -->
+  <text
+    x="100"
+    y="110"
+    font-family="Arial, Helvetica, sans-serif"
+    font-size="20"
+    text-anchor="middle"
+    fill="white"
+  >
+    Hello SVG!
+  </text>
+</svg>

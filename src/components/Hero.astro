@@ -1,33 +1,163 @@
 ---
-
+import volcanoLeft from '../../public/svgs/volcano-left.svg'
+import volcanoCenter from '../../public/svgs/volcano-center.svg'
+import volcanoRight from '../../public/svgs/volcano-right.svg'
+import volcanoCloud from '../../public/svgs/volcano-cloud.svg'
+import volcanoLava from '../../public/svgs/volcano-lava.svg'
+import island from '../../public/svgs/island.svg'
+import tree from '../../public/svgs/palm-tree.svg'
 ---
 
 <div
-  class="hero sticky flex flex-col h-[calc(100vh-44px)] w-full place-content-center items-center text-white"
+  class="hero sticky flex h-[calc(100vh-44px)] w-full flex-col place-content-center items-center text-white"
 >
-  <div>
-    <h1 class="text-5xl font-bold">SparkHacks 2025</h1>
-    <p class="float-right text-xl pt-[5px]">Feb 30th - 31st</p>
-  </div>
+  <div class="background-layer">
+    <div class="volcano-group">
+      <img class="ground left-volcano" src={volcanoLeft.src} />
+      <div class="center center-group">
+        <img class="center puff" src={volcanoCloud.src} />
+        <div class="ground center center-volcano">
+          <img class="lava" src={volcanoLava.src} />
+          <img class="center-mountain" src={volcanoCenter.src} />
+        </div>
+      </div>
+      <img class="ground right-volcano" src={volcanoRight.src} />
+    </div>
 
-  <div class="pt-[20px]">
-    <button class="mr-[10px]">Learn More</button>
-    <button>Apply</button>
+    <div class="island-group">
+      <img class="ground island" src={island.src} />
+      <img class="tree1" src={tree.src} />
+      <img class="tree2" src={tree.src} />
+    </div>
   </div>
-  
+  <div class="hero-text">
+    <div>
+      <h1 class="text-5xl font-bold">SparkHacks 2025</h1>
+      <p class="float-right pt-[5px] text-xl">Feb 30th - 31st</p>
+    </div>
+
+    <div class="pt-[20px]">
+      <button class="mr-[10px]">Learn More</button>
+      <button>Apply</button>
+    </div>
+  </div>
 </div>
 
 <style>
+  .island-group {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 50%;
+  }
+
+  .tree1 {
+    position: absolute;
+    /* right: 90px; */
+    width: 25%; /* percent of island*/
+    z-index: 10;
+    bottom: 0;
+    transform: translateX(100%);
+  }
+
+  .tree2 {
+    position: absolute;
+    right: calc(20% + 2vw);
+    width: 15.5%;
+    bottom: 20px;
+    transform: scaleX(-1);
+    transform-origin: center;
+    width: 15.5%;
+    z-index: 10;
+  }
+
+  .island {
+    z-index: 11;
+    width: 100%;
+  }
+
+  .hero-text {
+    z-index: 999;
+  }
+  .background-layer {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 70%;
+  }
+
+  
+
+  .volcano-group {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    width: 45%;
+  }
+  .volcano-group img {
+    position: absolute;
+  }
+
+  .puff {
+    bottom: clamp(30px, 14vw, 600px);
+  }
+  .center {
+    position: relative;
+    display: flex;
+    justify-content: center;
+  }
+  .center-group {
+    height: 300px;
+    width: 52.8%;
+  }
+  .center-volcano {
+    position: absolute;
+    width: 100%;
+  }
+  .center-mountain {
+    width: 100%;
+    z-index: 24;
+    bottom: 0;
+  }
+
+  .lava {
+    z-index: 30;
+    width: 53.2%;
+    bottom: clamp(0px, 1vw, 30px);
+  }
+
+  .left-volcano {
+    position: absolute;
+    left: 50%; /* Position at center */
+    /* Add your desired offset here */
+    left: 5%;
+    /* height: 15%; */
+    width: 43%;
+  }
+  .right-volcano {
+    z-index: 10;
+    position: absolute;
+    transform: translateX(50%); /* Move left half off-screen */
+    /* Add your desired offset here */
+    right: calc(20%);
+    width: 37%;
+  }
+  .ground {
+    position: absolute;
+    bottom: 0;
+  }
 
   .hero {
-    background: linear-gradient(160deg, #0880CA 24.6%, #7DFFF4 92.52%);
+    background: linear-gradient(160deg, #0880ca 24.6%, #7dfff4 92.52%);
   }
 
   button {
     width: 110px;
     border-radius: 12px;
     padding: 8px;
-    background-color: #092E41;
+    background-color: #092e41;
     font-weight: bold;
   }
 </style>
