@@ -16,7 +16,7 @@ import tree from '../../public/svgs/palm-tree.svg'
   container min-h-0 space-y-2" >
     <img class="max-w-md" src="/sparkhacks-logo.svg" alt="logo">
     
-    <h1 class="text-[#ffffff] text-8xl font-bold px-10">
+    <h1 class="text-[#ffffff] text-7xl font-bold px-10">
       Sparkhacks 2025
     </h1>
     <h1 class="text-[#F6B09C] text-6xl font-bold px-10">
@@ -24,24 +24,30 @@ import tree from '../../public/svgs/palm-tree.svg'
     </h1>
   </div>
 
-  <div class="flex flex-row justify-center align-middle
-  container min-h-0 z-100 overflow-y-hidden ">
+  <div class="flex flex-col justify-end align-middle
+  container min-h-0 z-100 ">
+  
     <!-- div wrap to get x overflow visible and y hidden -->
-      <img class="max-w-3xl origin-center 
-      transform translate-y-40 " src="/heroPage/moon.svg" alt="moon">
+     <div class="max-w-[90%] flex flex-col justify-end align-ce overflow-y-hidden">
+        <img class="container self-center" src="/heroPage/moon.svg" alt="moon">
+     </div>
   </div>
 </div>
 
-<div class="relative bg-white p-8">
-  <div class = "hero flex w-full h-[25vh] flex-row z-10 bg-[#014E6F]
+<!-- water -->
+<div class="flex bg-[#014E6F]">
+  <div class = "hero flex w-full h-[25vh] flex-row z-30 
   bg-cover bg-bottom bg-no-repeat" style="background-image:url('/heroPage/water.svg')" >
     <img class="w-full h-full object-cover " src="/heroPage/subtract.svg">
   </div>
+
+  <img class="w-full h-full absolute z-20 
+  transform -translate-y-120 max-h-[50vh]" src="/heroPage/rays.png">
 </div>
 
 
-<img class="w-full h-full absolute z-20 
-transform -translate-y-100" src="/heroPage/rays.png">
+
+
 
 
 <style>
