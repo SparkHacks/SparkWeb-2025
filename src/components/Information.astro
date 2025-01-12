@@ -1,13 +1,22 @@
 ---
 
 import Counter from '../components/Countdown';
-
+import whale from '../../public/whale/Whale.svg';
+import robot from '../../public/whale/Robot.svg';
+import rock from '../../public/whale/right-rock.svg';
 ---
 
 <section class="min-h-screen w-full content-center text-white 
-bg-gradient-to-b from-[#014E6F] to-[#041D33]" id="information">
+bg-gradient-to-b from-[#014E6F] to-[#041D33] relative" id="information">
+  <div class="break-group">
+    <div class="whale-group">
+      <img class="whale" src={whale.src} />
+      <img class="whale-robot" src={robot.src} />
+    </div>
+    <img class="right-rock" src={rock.src} />
+  </div>
 
-  <div class="flex my-10  justify-center gap-28">
+  <div class="flex my-10 justify-center gap-28">
     <div class="flex-col flex" id="countdown">
       <div class="flex flex-wrap justify-center gap-10">
         <div class="flex animate-bounce" id="chest"></div>
@@ -39,3 +48,36 @@ bg-gradient-to-b from-[#014E6F] to-[#041D33]" id="information">
    background-repeat: no-repeat;
    background-size: 75px;
   }
+
+  .break-group {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .whale-group {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    width: 60%;
+  }
+
+  .whale {
+    position: relative;
+    width: 40%;
+    left: -4%;
+  }
+
+  .whale-robot {
+    position: relative;
+    width: 10%;
+  }
+
+  .right-rock {
+    width: 25%;
+    right: 5%;
+  }
+
+  </style>
