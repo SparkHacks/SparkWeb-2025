@@ -39,7 +39,7 @@ export default function Information() {
         whileInView={{ opacity: 100, y:0 }}
         transition={{ duration: 1 }}
         viewport={{ once: true, amount: .5  }}
-        className="w-full flex flex-row items-center justify-center gap-[20px] mt-5 text-white">
+        className="w-full flex md:flex-row items-center justify-center gap-[20px] mt-5 text-white">
           <div className="rounded-[26.812px] backdrop-blur-[19.5px] h-[100px] w-[100px] bg-[url('../faqback.svg')] flex justify-center items-center flex-col">
             <h1 className="text-2xl font-poppin">{days}</h1>
             <span className="text-md font-poppin">Days</span>
