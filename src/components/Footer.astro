@@ -5,21 +5,20 @@
 <footer
   class= "bg-gradient-to-b from-[#14183f] to-[#181642] pt-20"
 >
-  <div class="w-full relative">
-    <img src="/octopus1.svg" alt="octopus" class="w-full block"/>
-    <img src="/footer-fish1.svg" alt="fish" class="w-[7%] absolute block top-[20%] left-[25%]"/>
-    <img src="/footer-fish2.svg" alt="fish" class="w-[2.5%] absolute block top-[30%] right-[25%]"/>
+  <div class="w-full relative overflow-x-hidden flex justify-center">
+    <img src="/octopus1.svg" alt="octopus" class="w-full block min-w-[640px]"/>
+    <img src="/footer-fish1.svg" alt="fish" class="w-[7%] min-w-[44px] absolute block top-[20%] left-[25%]"/>
+    <img src="/footer-fish2.svg" alt="fish" class="w-[2.5%] min-w-[16px] absolute block top-[30%] right-[25%]"/>
   </div>
-  <div class="grid h-60 grid-flow-col grid-cols-3 place-content-center items-center px-10 text-center text-white bg-[#0c0c0c] -mt-5 pb-8">
+  <div class="grid p-10 grid-flow-row grid-rows-3 tablet:grid-flow-col tablet:grid-cols-3 tablet:grid-rows-1 place-content-center items-center text-center text-white bg-[#0c0c0c] -mt-5">
     <div class="flex items-center justify-center">
       <img class="block w-[96px]" src="/sparkhacks-logo.svg" alt="logo" />
     </div>
     <div>
       <div>SparkHacks 2025</div>
-      <a class="underline" href="mailto:sparkhacks@uic.edu"
+      <a class="underline text-blue-300" href="mailto:sparkhacks@uic.edu"
         >sparkhacks@uic.edu</a
       >
-      <div class="mt-5">Made with 💖 by the SparkHacks team</div>
     </div>
     <div class="flex flex-col place-items-center">
       <p class="pb-2 font-semibold">Follow Us</p>
@@ -48,4 +47,5 @@
       </div>
     </div>
   </div>
+  <div class="bg-[#0c0c0c] text-center text-white px-16 pb-8">Made with 💖 by the SparkHacks team</div>
 </footer>
