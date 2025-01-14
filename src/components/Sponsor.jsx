@@ -3,23 +3,23 @@ import { motion  } from 'framer-motion';
 const sponsors = [
   {
     name: "CME Group",
-    image: "../sponsorLogo/cmegroup.svg",
+    image: "../sponsors/cmegroup.svg",
   },
   {
     name: "UIC CS Department",
-    image: "../sponsorLogo/uicengineering.svg",
+    image: "../sponsors/uicengineering.svg",
   },
   {
     name: "John Deere",
-    image: "../sponsorLogo/johndeere.svg",
+    image: "../sponsors/johndeere.svg",
   },
   {
     name: "Grainger",
-    image: "../sponsorLogo/grainger.svg",
+    image: "../sponsors/grainger.svg",
   },
   {
     name: "Fulcrum",
-    image: "../sponsorLogo/fulcrum.svg",
+    image: "../sponsors/fulcrum.svg",
   },
 ]
 

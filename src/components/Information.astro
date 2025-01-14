@@ -6,17 +6,17 @@ import robot from '../../public/whale/Robot.svg';
 import rock from '../../public/whale/right-rock.svg';
 ---
 
-<section class="min-h-screen w-full content-center text-white 
+<section class="w-full grid grid-cols-2 content-center text-white 
 bg-gradient-to-b from-[#014E6F] to-[#041D33] relative" id="information">
-  <div class="break-group">
+  <!-- <div class="break-group">
     <div class="whale-group">
       <img class="whale" src={whale.src} />
       <img class="whale-robot" src={robot.src} />
     </div>
     <img class="right-rock" src={rock.src} />
-  </div>
+  </div> -->
 
-  <div class="flex my-10 justify-center gap-28">
+  <div class="flex my-10 justify-center gap-28 ">
     <div class="flex-col flex" id="countdown">
       <div class="flex flex-wrap justify-center gap-10">
         <div class="flex animate-bounce" id="chest"></div>
@@ -24,20 +24,18 @@ bg-gradient-to-b from-[#014E6F] to-[#041D33] relative" id="information">
         text-3xl font-bold">
           Opening In...</h1>
         </div>
-    <Counter client:load/>
+        <Counter client:load/>
+    </div>
   </div>
 
-  <div class="flex-col flex gap-[25px] justify-center">
+  <div class="flex-col flex gap-[25px] justify-center items-center">
     <h1 class=" text-white text-center font-poppin lg:text-[50px] 
     text-3xl font-bold">Resources & FAQ</h1>
     <a href=" https://www.notion.so/HackPack-2025-16c1bf81ade280e9b4f6ea19a572a181?pvs=4" target="_blank" class="mt-5 bg-[url('../faqback.svg')] backdrop-blur-[19.5px] h-[100px] w-[300px] flex justify-center items-center flex-col ">
       <h1 class="text-white text-md font-poppin">Click to view</h1>
       <h1 class="text-white text-2xl font-poppin">Hack Pack</h1>
     </a>
-  </div>
- 
-  </div>
-  
+  </div>  
 </section>
 
 <style>
