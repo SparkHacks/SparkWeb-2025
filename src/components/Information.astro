@@ -8,13 +8,13 @@ import rock from '../../public/whale/right-rock.svg';
 
 <section class="w-full grid grid-cols-2 content-center text-white 
 bg-gradient-to-b from-[#014E6F] to-[#041D33] relative" id="information">
-  <!-- <div class="break-group">
+  <div class="break-group">
     <div class="whale-group">
-      <img class="whale" src={whale.src} />
-      <img class="whale-robot" src={robot.src} />
+      <img class="whale animate-bob-sway-slow" src={whale.src} />
+      <img class="whale-robot animate-bob-sway-med" src={robot.src} />
     </div>
     <img class="right-rock" src={rock.src} />
-  </div> -->
+  </div>
 
   <div class="flex my-10 justify-center gap-28 ">
     <div class="flex-col flex" id="countdown">
@@ -66,11 +66,13 @@ bg-gradient-to-b from-[#014E6F] to-[#041D33] relative" id="information">
     position: relative;
     width: 40%;
     left: -4%;
+    /* animation: bob 20s ease-out 0s infinite, sway 15s ease-in-out 1s infinite; */
   }
 
   .whale-robot {
     position: relative;
     width: 10%;
+    /* animation: bob 10s ease-out 1s infinite, sway 4s ease-in-out 0s infinite; */
   }
 
   .right-rock {
