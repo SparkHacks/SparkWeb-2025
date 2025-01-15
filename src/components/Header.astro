@@ -20,7 +20,7 @@ const links = [
       ))
     }
     <li class="apply">
-      <a href="#apply">Apply</a>
+      <a onclick="alert('Registration will be opened soon')" class="cursor-pointer">Apply</a>
     </li>
   </ul>
 </header>
@@ -35,6 +35,9 @@ const links = [
     font-weight: bold;
   }
 
+  .apply:hover {
+    filter: brightness(80%)
+  }
   .apply > a {
     width: 100%;
   }
