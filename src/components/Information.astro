@@ -1,13 +1,14 @@
 ---
-
-import Counter from '../components/Countdown';
-import whale from '../../public/whale/Whale.svg';
-import robot from '../../public/whale/Robot.svg';
-import rock from '../../public/whale/right-rock.svg';
+import Counter from '../components/Countdown'
+import whale from '../../public/whale/Whale.svg'
+import robot from '../../public/whale/Robot.svg'
+import rock from '../../public/whale/right-rock.svg'
 ---
 
-<section class="w-full grid grid-cols-2 content-center text-white 
-bg-gradient-to-b from-[#014E6F] to-[#041D33] relative" id="information">
+<section
+  class="relative w-full content-center bg-gradient-to-b from-[#014E6F] to-[#114372] text-white"
+  id="information"
+>
   <div class="break-group">
     <div class="whale-group">
       <img class="whale animate-bob-sway-slow" src={whale.src} />
@@ -16,35 +17,56 @@ bg-gradient-to-b from-[#014E6F] to-[#041D33] relative" id="information">
     <img class="right-rock" src={rock.src} />
   </div>
 
-  <div class="flex my-10 justify-center gap-28 ">
-    <div class="flex-col flex" id="countdown">
+  <div class="my-10 flex flex-wrap justify-center gap-28">
+    <div class="flex flex-col" id="countdown">
       <div class="flex justify-center gap-10">
         <div class="flex animate-bounce" id="chest"></div>
-        <h1 class=" text-center font-poppin lg:text-[50px] 
-        text-3xl font-bold">
-          Opening In...</h1>
-        </div>
-        <Counter client:load/>
+        <h1 class="font-poppin lg:text-[50px] text-center text-3xl font-bold">
+          Opening In...
+        </h1>
+      </div>
+      <Counter client:load />
+    </div>
+
+    <div class="flex flex-col">
+      <div class="flex flex-row gap-[10px]">
+        <h1 class="lg:text-[50px] animate-bounce text-5xl">📝</h1>
+        <h1
+          class="font-poppin lg:text-[50px] text-center text-3xl font-bold text-white mb-[40px]"
+        >
+          Resources & FAQ
+        </h1>
+      </div>
+
+      <a
+        href=" https://www.notion.so/HackPack-2025-16c1bf81ade280e9b4f6ea19a572a181?pvs=4"
+        target="_blank"
+        class="mt-5 flex h-[100px] w-[300px] flex-col items-center justify-center bg-[url('../faqback.svg')] backdrop-blur-[19.5px]"
+      >
+        <h1 class="text-md font-poppin text-white">Click to view</h1>
+        <h1 class="font-poppin text-2xl text-white">Hack Pack</h1>
+      </a>
     </div>
   </div>
-
-  <div class="flex-col flex gap-[25px] justify-center items-center">
-    <h1 class=" text-white text-center font-poppin lg:text-[50px] 
-    text-3xl font-bold">Resources & FAQ</h1>
-    <a href=" https://www.notion.so/HackPack-2025-16c1bf81ade280e9b4f6ea19a572a181?pvs=4" target="_blank" class="mt-5 bg-[url('../faqback.svg')] backdrop-blur-[19.5px] h-[100px] w-[300px] flex justify-center items-center flex-col ">
-      <h1 class="text-white text-md font-poppin">Click to view</h1>
-      <h1 class="text-white text-2xl font-poppin">Hack Pack</h1>
-    </a>
-  </div>  
 </section>
 
 <style>
+  .grid-cols-2 {
+    grid-template-columns: repeat(auto-fill, minmax(800px, 1fr));
+  }
+
   #chest {
-   background: url('../chest.svg'); 
-   width: 75px;
-   height: 75px;
-   background-repeat: no-repeat;
-   background-size: 75px;
+    background: url('../chest.svg');
+    width: 75px;
+    height: 75px;
+    background-repeat: no-repeat;
+    background-size: 75px;
+  }
+
+  #paper {
+    width: 75px;
+    height: 75px;
+    background-repeat: no-repeat;
   }
 
   .break-group {
@@ -79,5 +101,4 @@ bg-gradient-to-b from-[#014E6F] to-[#041D33] relative" id="information">
     width: 25%;
     right: 5%;
   }
-
-  </style>
+</style>
