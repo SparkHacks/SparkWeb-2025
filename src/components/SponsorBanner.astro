@@ -5,15 +5,32 @@ import Sponsor from '../components/Sponsor';
 ---
 
 <section class="w-full content-center text-white bg-gradient-to-b from-[#0a1b37] to-[#0c1b39]" id="sponsors">
-    <h1 class="z-[1] flex h-full w-full flex-row items-center justify-center gap-5 pt-20 text-4xl font-bold text-white md:flex-row mb-[40px]">
+    <h1 class="z-[1] flex w-full flex-row items-center justify-center gap-5 pt-20 text-4xl font-bold text-white md:flex-row mb-[40px]">
     Sponsors
     <div class="flex animate-bob-sway-med" id="pink-jelly"></div></div>
   </h1>
+  <div class="flex flex-row justify-between mx-[15px] mb-[-80px]">
+    <img class="sponsor-creature block w-[96px]" src="public/sponsors/crab.svg" />
+    <img class="sponsor-creature animate-bob-sway-med block w-[96px]" src="public/sponsors/seahorse.svg" />
+    <img class="sponsor-creature block w-[96px]" src="public/sponsors/starfish.svg"/>
+    <img class="sponsor-creature animate-bob-fast  block h-[96px]" src="public/threejelly.svg"  />
+    <img class="sponsor-creature block w-[96px]" src="public/sponsors/greenfish.svg" />
+    <img class="sponsor-creature animate-bob-sway-med block w-[96px]" src="public/sponsors/orangefish.svg"  />
+  </div>
   <Sponsor client:load/>
+  <div class="flex flex-row justify-between mx-[80px] mt-[-20px]">
+    <img class="sponsor-creature animate-bob-sway-med block w-[96px]" src="public/sponsors/orangefish.svg"  />
+    <img class="sponsor-creature block h-[96px]" src="public/threefish.svg"  />
+    <img class="sponsor-creature animate-bob-sway-med block w-[96px]" src="public/sponsors/greenwhale.svg"  />
+    <img class="sponsor-creature block w-[96px]" src="public/sponsors/turtle.svg"  />
+    <img class="sponsor-creature animate-bob-slow block w-[96px]" src="public/sponsors/orangefish.svg"  />
+    <img class="sponsor-creature block w-[96px]" src="public/sponsors/seahorse.svg" />
+    <img class="sponsor-creature animate-bob-sway-med block w-[96px]" src="public/sponsors/crab.svg" />
+  </div>
+  
   </section>
   
   <style>
-
 
 #pink-jelly {
    background: url('../pinkjelly.svg'); 
@@ -24,34 +41,5 @@ import Sponsor from '../components/Sponsor';
    /* animation: swim 4s infinite; */
 }
 
-/* @keyframes swim {
-  0% {
-    transform: translateY(0px) translateX(0) rotate(-5deg);
-  }
-  10%{
-    transform: translateY(-30px) translateX(0) rotate(-10deg);
-  }
-  15%{
-    transform: translateY(-40px) translateX(-40px) rotate(-10deg);
-  }
-  25%{
-    transform: translateY(-38px) translateX(-80px) rotate(-10deg);
-  }
-  35%{
-    transform: translateY(-50px) translateX(-120px) rotate(-10deg);
-  }
-  45%{
-    transform: translateY(-50px) translateX(-200px) rotate(-10deg);
-  }
-  50%{
-    transform: translateY(-40px) translateX(-240px) rotate(-15deg);
-  }
-  60%{
-    transform: rotateY(180deg) translateY(-40px) translateX(-240px) rotate(-15deg);
-  }
-  100% {
-    transform: translateY(0px) translateX(0) rotate(-30deg);
-  } 
- } */
-  </style>
+</style>
   
