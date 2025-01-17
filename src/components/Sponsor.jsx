@@ -1,5 +1,5 @@
 import { motion  } from 'framer-motion';
-// import './SponStyle.css';
+import './SponStyle.css';
 
 const sponsors = [
   {
