@@ -1,4 +1,5 @@
 import { motion  } from 'framer-motion';
+import './SponStyle.css';
 
 const sponsors = [
   {
@@ -29,7 +30,7 @@ const logoGap = 30
 
 const maequeeSponsor = {
   animate: {
-    x: [0, -sponsorLength * (logoWidth + logoGap)],
+    x: [-sponsorLength * (logoWidth + logoGap), 0],
     transition: {
       x: {
         repeat: Infinity,
