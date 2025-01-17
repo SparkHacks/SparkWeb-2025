@@ -9,7 +9,7 @@ import rock from '../../public/whale/right-rock.svg'
   class="relative w-full content-center bg-gradient-to-b from-[#014E6F] to-[#114372] text-white"
   id="information"
 >
-  <!-- <div class="break-group">
+   <div class="break-group relative">
     <div class="whale-group">
       <img class="whale animate-bob-sway-slow" src={whale.src} />
       <img class="whale-robot animate-bob-sway-med" src={robot.src} />
@@ -17,7 +17,7 @@ import rock from '../../public/whale/right-rock.svg'
     <img class="right-rock" src={rock.src} />
   </div>
 
-  <div class="my-10 flex flex-wrap justify-center gap-28">
+  <div class="flex flex-wrap justify-center gap-28" id="counter-faq">
     <div class="flex flex-col" id="countdown">
       <div class="flex justify-center gap-10">
         <div class="flex animate-bounce" id="chest"></div>
@@ -51,8 +51,8 @@ import rock from '../../public/whale/right-rock.svg'
 </section>
 
 <style>
-  .grid-cols-2 {
-    grid-template-columns: repeat(auto-fill, minmax(800px, 1fr));
+  #counter-faq {
+    margin-top: -30px;
   }
 
   #chest {
@@ -70,7 +70,7 @@ import rock from '../../public/whale/right-rock.svg'
   }
 
   .break-group {
-    position: absolute;
+    margin-top: -20px;
     width: 100%;
     top: 0;
     display: flex;
