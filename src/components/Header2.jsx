@@ -57,14 +57,12 @@ export default function Header2() {
         animate={controls}
         variants={{
           open: { y: 0},
-          closed: { y: '-120%' },
+          closed: { y: '120%' },
         }}
         transition={{ duration: 1 }}
-        className={`lg:hidden fixed top-0 right-0 h-screen w-full bg-[#3a7eb6] bg-cover text-white flex justify-center items-center`}
+        className={`tablet:hidden fixed top-0 right-0 h-screen w-full bg-[#024267] text-white flex justify-center items-center py-[30px]`}
       > 
-
-        <div className="flex flex-col items-center justify-center h-full z-[61]">
-
+        <div className="flex flex-col items-center justify-center z-[61]">
           <motion.span 
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -73,7 +71,6 @@ export default function Header2() {
               <img className="w-[100px] h-auto" src={"/sparkhacks-logo.svg"}/>
               <h1>SparkHacks 2025</h1>
           </motion.span>
-
           {
             links.map((link) => (
               <motion.a
