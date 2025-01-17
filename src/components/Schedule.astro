@@ -68,7 +68,7 @@ const schedulingData = [
 ---
 
 <section
-  class="w-full content-center bg-[#041D33] text-white"
+  class="w-full content-center bg-gradient-to-b from-[#114372] to-[#041D33] text-white"
   id="schedule"
 >
   <h1
@@ -93,7 +93,9 @@ const schedulingData = [
             ))}
           </div>
         </div>
+        {/* <div class= "flex" id="mini-jelly"></div> */}
     </div>
+   
       ))
     }
     <div class= "flex animate-bob-fast" id="mini-jelly"></div>
@@ -103,12 +105,12 @@ const schedulingData = [
 
 <style>
   #mini-jelly{
-    position: absolute;
+    position: relative;
     background: url('../minijelly.svg'); 
    width: 75px;
    height: 75px;
    background-repeat: no-repeat;
    background-size: 75px;
-   top: 2200px;
+   margin: 35px;
   }
 </style>

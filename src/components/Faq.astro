@@ -1,0 +1,136 @@
+---
+const faqQuestions = [
+  {
+    question: 'Who can participate?',
+    answer:
+      'SparkHacks is open to anyone! Whether you' +
+      're a freshman with no coding experience or a senior with a keen interest in technology, you are welcome to join. We encourage diversity and a mix of skills to create a dynamic and enriching experience for all participants.',
+  },
+  {
+    question: 'What is the deadline to apply for SparkHacks?',
+    answer:
+      'There is no deadline to apply but we will be accepting applications on a rolling basis and will close registrations once we hit a certain threshold. Please apply as soon as possible since we only have a limited number of spots available! Encourage the rest of your team to apply as soon as possible as well.',
+  },
+  {
+    question: "What if I'm not an experienced coder?",
+    answer:
+      'No problem! We have a No-Code track where you can take one of our prompts and implement it using Figma!',
+  },
+  {
+    question: 'Do I need a team to participate in SparkHacks?',
+    answer:
+      'Yes, teams must consist of 2 to 5 members; Individual participation is not allowed due to devpost rules, and the events nature is not conducive to solo participation. However, we will be having a Team Formation Social to help you find potential teammates!',
+  },
+  {
+    question: 'Can I start working on my project before SparkHacks begins?',
+    answer:
+      'No, all projects must be started and developed during SparkHacks. Participants are expected to attend the opening session to learn of the tracks and corresponding prompts.',
+  },
+  {
+    question: 'Who should I contact if I have questions',
+    answer:
+      'You can reach out to the Exec Team through sparkhacks@uic.edu, or on Instagram @sparkhacksuic or LinkedIn - SparkHacks',
+  },
+  {
+    question: 'Is SparkHacks overnight?',
+    answer:
+      'Unfortunately, at this time we cannot offer an overnight Hackathon experience. You are welcome to continue hacking at home within the hacking period but we cannot provide facilities for sleeping on campus.',
+  },
+  {
+    question: 'How to find support during the hackathon?',
+    answer:
+      'Mentors will be available throughout SparkHacks in person as well as through Discord to provide guidance, answer questions, and assist participants with technical challenges. You can reach out to a mentor at any time during SparkHacks!',
+  },
+  {
+    question: 'How can I submit my project?',
+    answer:
+      'All submissions will be made through Devpost which is also how we will be keeping track of teams. There will be a session to familiarize yourself with how to submit your project through Devpost during the hackathon.',
+  },
+  {
+    question: 'How are the projects judged, and what are the criteria?',
+    answer:
+      'The Judging Criteria will be available within the HackPack. A panel of experienced judges from the industry along with faculty will evaluate the projects and determine the winners.',
+  },
+  {
+    question: 'What prizes are available for winners?',
+    answer:
+      'Prizes may vary, but typically winners will receive recognition as well as valuable tech gadgets. Prizes are track-specific and the list of prizes can be found in the HackPack.',
+  },
+  {
+    question: 'Where can I find SparkHacks resources?',
+    answer:
+      'All SparkHacks resources, including guidelines, workshops, resources to help you best prepare, and other relevant information, is currently available in the HackPack.',
+  },
+]
+---
+
+<section
+  class="w-max-[300px] relative flex-row content-center items-center justify-center bg-[#041D33] bg-gradient-to-b text-white "
+>
+<div class="flex flex-row gap-[10px] justify-center mt-[30px]">
+    <h1 class="lg:text-[50px] animate-bounce text-5xl">💬</h1>
+    <h1
+      class="font-poppin lg:text-[50px] text-center text-3xl font-bold text-white mb-[40px]"
+    >
+      Resources & FAQ
+    </h1>
+  </div>
+
+  <div class="w-max-[300px] md:flex-row flex flex-wrap justify-center" id="faq">
+    {
+      faqQuestions.map((faq) => (
+        <div class="flex-start relative flex min-h-[100px] flex-col text-white">
+          <div
+            id="question"
+            class="m-[15px] max-h-fit min-h-[100px] w-[250px] cursor-pointer content-center justify-center rounded-[20px] border-[2px] bg-[#165E6B] p-5 text-center font-bold"
+          >
+            {faq.question}
+          </div>
+          <div
+            id="answer"
+            class="m-[15px] hidden content-center justify-center bg-gradient-to-b from-[#2a5574] to-[#2b7d7d] text-center"
+          >
+            {faq.answer}
+          </div>
+        </div>
+      ))
+    }
+  </div>
+</section>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const questions = document.querySelectorAll('#question')
+
+    questions.forEach((question) => {
+      question.addEventListener('click', () => {
+        const answer = question.nextElementSibling
+
+        if (answer) {
+          answer.classList.toggle('hidden')
+        }
+      })
+    })
+  })
+</script>
+
+<style>
+  #question:active {
+    position: relative;
+    top: 5px;
+  }
+
+  .hidden {
+    display: none;
+  }
+
+  #answer {
+    background-color: #165e6b;
+    width: 250px;
+    min-height: 50px;
+    border-radius: 20px;
+    vertical-align: center;
+    text-align: center;
+    padding: 15px;
+  }
+</style>
