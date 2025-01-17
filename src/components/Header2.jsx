@@ -33,8 +33,8 @@ export default function Header2() {
     >
       <ul className="space-x-11 hidden tablet:flex">
         {
-          links.map((link) => (
-            <li className = "flex content-center flex-wrap font-bold">
+          links.map((link, index) => (
+            <li key={index} className = "flex content-center flex-wrap font-bold">
               <a href={link.href}>{link.name}</a>
             </li>
           ))
@@ -60,7 +60,7 @@ export default function Header2() {
           closed: { y: '120%' },
         }}
         transition={{ duration: 1 }}
-        className={`tablet:hidden fixed top-0 right-0 h-screen w-full bg-[#024267] text-white flex justify-center items-center py-[30px]`}
+        className={`tablet:hidden fixed top-0 right-0 h-screen w-full bg-gradient-to-b from-[#014E6F] to-[#041D33] text-white flex justify-center items-center py-[30px]`}
       > 
         <div className="flex flex-col items-center justify-center z-[61]">
           <motion.span 
@@ -72,8 +72,9 @@ export default function Header2() {
               <h1>SparkHacks 2025</h1>
           </motion.span>
           {
-            links.map((link) => (
+            links.map((link, index) => (
               <motion.a
+                key={index}
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.3 }}
@@ -101,7 +102,8 @@ export default function Header2() {
             <h1>Close</h1>
           </motion.button>
         </div>
-
+        
+        <img src="/Jellyfish.svg" className='block absolute bottom-10 left-10 h-[150px] animate-bob-med'/>
       </motion.div>      
     </header>
   );
