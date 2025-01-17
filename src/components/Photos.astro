@@ -1,5 +1,5 @@
 ---
-import MySwiper from '../components/MySwiper.jsx'
+import PhotoSwiper from './PhotoSwiper.jsx'
 ---
 
 <section
@@ -9,8 +9,8 @@ import MySwiper from '../components/MySwiper.jsx'
     <h1 class="text-5xl font-bold"> ✨ Photos!</h1>
   </div>
 
-  <div class="container px-[5%]">
-    <MySwiper client:load />
+  <div class="container desktop:px-[5%]">
+    <PhotoSwiper client:load />
   </div>
 </section>
 
