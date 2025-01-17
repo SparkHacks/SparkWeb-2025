@@ -100,25 +100,45 @@ const faqQuestions = [
 
 <script>
   document.addEventListener('DOMContentLoaded', () => {
-    const questions = document.querySelectorAll('#question')
+  const questions = document.querySelectorAll('#question');
 
-    questions.forEach((question) => {
-      question.addEventListener('click', () => {
-        const answer = question.nextElementSibling
+  questions.forEach((question) => {
+    question.addEventListener('click', () => {
+      const answer = question.nextElementSibling;
 
-        if (answer) {
-          answer.classList.toggle('hidden')
-        }
-      })
-    })
-  })
+      if (answer) {
+        answer.classList.toggle('hidden');
+      }
+
+      // Toggle a class on the question to rotate the arrow
+      question.classList.toggle('expanded');
+    });
+  });
+});
+
 </script>
 
 <style>
-  #question:active {
-    position: relative;
-    top: 5px;
-  }
+  #question::after {
+  position: relative;
+  top: 5px;
+  display: inline-block;
+  background-size: 20px;
+  height: 20px;
+  width: 20px;
+  content: "";
+  background-image: url('../../public/faq/arrow.png');
+  transition: transform 0.3s ease;
+}
+
+#question.expanded::after {
+  transform: rotate(180deg);
+}
+
+#question:active {
+  position: relative;
+  top: 5px;
+}
 
   .hidden {
     display: none;
