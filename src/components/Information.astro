@@ -11,11 +11,11 @@ import rock from '../../public/whale/right-rock.svg'
 >
   <!-- <div class="break-group">
     <div class="whale-group">
-      <img class="whale" src={whale.src} />
-      <img class="whale-robot" src={robot.src} />
+      <img class="whale animate-bob-sway-slow" src={whale.src} />
+      <img class="whale-robot animate-bob-sway-med" src={robot.src} />
     </div>
     <img class="right-rock" src={rock.src} />
-  </div> -->
+  </div>
 
   <div class="my-10 flex flex-wrap justify-center gap-28">
     <div class="flex flex-col" id="countdown">
@@ -88,11 +88,13 @@ import rock from '../../public/whale/right-rock.svg'
     position: relative;
     width: 40%;
     left: -4%;
+    /* animation: bob 20s ease-out 0s infinite, sway 15s ease-in-out 1s infinite; */
   }
 
   .whale-robot {
     position: relative;
     width: 10%;
+    /* animation: bob 10s ease-out 1s infinite, sway 4s ease-in-out 0s infinite; */
   }
 
   .right-rock {
