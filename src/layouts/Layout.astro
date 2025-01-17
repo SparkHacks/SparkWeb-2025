@@ -33,6 +33,7 @@ const { title } = Astro.props
   html {
     font-family: 'nunito', system-ui, sans-serif;
     background: #13151a;
+    scroll-behavior: smooth;
   }
   code {
     font-family:
@@ -44,5 +45,19 @@ const { title } = Astro.props
       Bitstream Vera Sans Mono,
       Courier New,
       monospace;
+  }
+
+  @keyframes bob {
+    0% {translate: 0 0;}
+    20% {translate: 0 -8px;}
+    55% {translate: 0 5px;}
+    80% {translate: 0 -1px}
+    100% {translate: 0 0;}
+  }
+
+  @keyframes sway {
+    0% {rotate: 0deg;}
+    33% {rotate: 5deg;}
+    70% {rotate: -5deg;}
   }
 </style>

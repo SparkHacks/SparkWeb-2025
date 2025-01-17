@@ -1,6 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
+import Header2 from "../components/Header2"
 import Hero from '../components/Hero.astro';
 import About from '../components/About.astro';
 import Information from '../components/Information.astro';
@@ -8,14 +9,22 @@ import Team from '../components/Team.astro';
 import Footer from '../components/Footer.astro';
 import Schedule from '../components/Schedule.astro';
 import SponsorBanner from '../components/SponsorBanner.astro';
+import Faq from '../components/Faq.astro';
+import Photos from '../components/Photos.astro';
+import WhaleRockBreak from '../components/WhaleRockBreak.astro';
+import Workshops from '../components/Workshops.astro';
 ---
 
 <Layout title="SparkHacks 2025">
-	<Header />
+	<Header2 client:load/>
 	<Hero />
 	<About />
 	<Information/>
+	<Photos/>
+	<!-- <WhaleRockBreak/> -->
+	 <Workshops/>
 	<Schedule />
+	<Faq/>
 	<SponsorBanner/>
 	<Team />
 	<Footer />

@@ -1,60 +1,70 @@
 ---
-
-import Counter from '../components/Countdown';
-import whale from '../../public/whale/Whale.svg';
-import robot from '../../public/whale/Robot.svg';
-import rock from '../../public/whale/right-rock.svg';
+import Counter from '../components/Countdown'
+import whale from '../../public/whale/Whale.svg'
+import robot from '../../public/whale/Robot.svg'
+import rock from '../../public/whale/right-rock.svg'
 ---
 
-<section class="w-full grid grid-cols-2 content-center text-white 
-bg-gradient-to-b from-[#014E6F] to-[#041D33] relative" id="information">
-  <!-- <div class="break-group">
+<section
+  class="flex justify-center pb-28 bg-[#014E6F] text-white"
+  id="information"
+>
+   <!-- <div class="break-group relative">
     <div class="whale-group">
-      <img class="whale" src={whale.src} />
-      <img class="whale-robot" src={robot.src} />
+      <img class="whale animate-bob-sway-slow" src={whale.src} />
+      <img class="whale-robot animate-bob-sway-med" src={robot.src} />
     </div>
     <img class="right-rock" src={rock.src} />
   </div> -->
 
-  <div class="flex my-10 justify-center gap-28 ">
-    <div class="flex-col flex" id="countdown">
-      <div class="flex flex-wrap justify-center gap-10">
-        <div class="flex animate-bounce" id="chest"></div>
-        <h1 class=" text-center font-poppin lg:text-[50px] 
-        text-3xl font-bold">
-          Opening In...</h1>
-        </div>
-        <Counter client:load/>
+  <div class="flex flex-wrap gap-x-20 gap-y-28 desktop:container px-[10%] desktop:px-[2%] " id="counter-faq">
+    
+    <div class="flex-auto" id="countdown">
+      <div class="flex justify-center items-center">
+        <h1 class="animate-bounce text-5xl mr-4">🌊</h1>
+        <h1 class="font-poppin text-center text-5xl font-bold">
+          Making Waves In...
+        </h1>
+      </div>
+      <Counter client:load />
+    </div>
+
+    <div class="flex-auto ">
+      <div class="flex justify-center items-center">
+        <h1 class="text-5xl mr-4">🚧
+        </h1>
+        <h1
+          class="font-poppin text-center text-5xl font-bold text-white "
+        >
+          Resources
+        </h1>
+      </div>
+
+      <div class="flex justify-center">
+        <a
+        href="https://example.com"
+        target="_blank"
+        class="mt-5 flex h-[120px] w-[300px] flex-col items-center justify-center bg-[url('../faqback.svg')] backdrop-blur-[19.5px]"
+        >
+          <!-- <h1 class="text-lg font-poppin text-white">Click to view</h1> -->
+          <h1 class="font-poppin text-3xl text-white">Under Construction</h1>
+        </a>
+      </div>
     </div>
   </div>
-
-  <div class="flex-col flex gap-[25px] justify-center items-center">
-    <h1 class=" text-white text-center font-poppin lg:text-[50px] 
-    text-3xl font-bold">Resources & FAQ</h1>
-    <a href=" https://www.notion.so/HackPack-2025-16c1bf81ade280e9b4f6ea19a572a181?pvs=4" target="_blank" class="mt-5 bg-[url('../faqback.svg')] backdrop-blur-[19.5px] h-[100px] w-[300px] flex justify-center items-center flex-col ">
-      <h1 class="text-white text-md font-poppin">Click to view</h1>
-      <h1 class="text-white text-2xl font-poppin">Hack Pack</h1>
-    </a>
-  </div>  
 </section>
 
-<style>
+
+<!-- <style>
+
   #chest {
-   background: url('../chest.svg'); 
-   width: 75px;
-   height: 75px;
-   background-repeat: no-repeat;
-   background-size: 75px;
+    background: url('../chest.svg');
+    width: 75px;
+    height: 75px;
+    background-repeat: no-repeat;
+    background-size: 75px;
   }
 
-  .break-group {
-    position: absolute;
-    width: 100%;
-    top: 0;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-  }
   .whale-group {
     display: flex;
     flex-direction: row;
@@ -66,16 +76,17 @@ bg-gradient-to-b from-[#014E6F] to-[#041D33] relative" id="information">
     position: relative;
     width: 40%;
     left: -4%;
+    /* animation: bob 20s ease-out 0s infinite, sway 15s ease-in-out 1s infinite; */
   }
 
   .whale-robot {
     position: relative;
     width: 10%;
+    /* animation: bob 10s ease-out 1s infinite, sway 4s ease-in-out 0s infinite; */
   }
 
   .right-rock {
     width: 25%;
     right: 5%;
   }
-
-  </style>
+</style> -->

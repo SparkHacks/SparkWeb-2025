@@ -1,0 +1,46 @@
+---
+import whale from '../../public/whale/Whale.svg'
+import robot from '../../public/whale/Robot.svg'
+import rock from '../../public/whale/right-rock.svg'
+---
+
+<div class="break-group">
+  <div class="whale-group">
+    <img class="whale" src={whale.src} />
+    <img class="whale-robot" src={robot.src} />
+  </div>
+  <img class="right-rock" src={rock.src} />
+</div>
+
+<style>
+  .break-group {
+    position: relative;
+    width: 100%;
+    top: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .whale-group {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    width: 60%;
+  }
+
+  .whale {
+    position: relative;
+    width: 40%;
+    left: -4%;
+  }
+
+  .whale-robot {
+    position: relative;
+    width: 10%;
+  }
+
+  .right-rock {
+    width: 25%;
+    right: 5%;
+  }
+</style>

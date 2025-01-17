@@ -1,0 +1,29 @@
+.apply {
+  text-align: center;
+  width: 110px;
+  border-radius: 12px;
+  padding: 8px;
+  background-color: #092e41;
+  font-weight: bold;
+}
+
+.apply:hover {
+  filter: brightness(80%)
+}
+.apply > a {
+  width: 100%;
+}
+
+/* li > a {
+  font-size: clamp(0.8rem, 1.5vw, 1.4rem);
+} */
+
+.apply2 {
+  text-align: center;
+  width: 130px;
+  border-radius: 12px;
+  padding: 8px 16px;
+  font-weight: bold;
+  background-color: #f8dd44;
+  color: #092e41;
+}

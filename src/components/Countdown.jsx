@@ -39,22 +39,22 @@ export default function Information() {
         whileInView={{ opacity: 100, y:0 }}
         transition={{ duration: 1 }}
         viewport={{ once: true, amount: .5  }}
-        className="w-full flex flex-row items-center justify-center gap-[20px] mt-5 text-white">
-          <div className="rounded-[26.812px] backdrop-blur-[19.5px] h-[100px] w-[100px] bg-[url('../faqback.svg')] flex justify-center items-center flex-col">
-            <h1 className="text-2xl font-poppin">{days}</h1>
+        className="w-full flex flex-wrap items-center justify-center gap-[20px] mt-5 text-white">
+          <div className="rounded-[26.812px] backdrop-blur-[19.5px] h-[120px] w-[120px] bg-[url('../faqback.svg')] flex justify-center items-center flex-col">
+            <h1 className="text-4xl font-poppin">{days}</h1>
             <span className="text-md font-poppin">Days</span>
           </div>
           
-          <div className="rounded-[26.812px] backdrop-blur-[19.5px] h-[100px] w-[100px] bg-[url('../faqback.svg')] flex justify-center items-center flex-col">
-            <h1 className=" text-2xl font-poppin">{hours}</h1>
+          <div className="rounded-[26.812px] backdrop-blur-[19.5px] h-[120px] w-[120px] bg-[url('../faqback.svg')] flex justify-center items-center flex-col">
+            <h1 className=" text-4xl font-poppin">{hours}</h1>
             <span className="text-md font-poppin">Hours</span>
           </div>
-          <div className="rounded-[26.812px] backdrop-blur-[19.5px] h-[100px] w-[100px] bg-[url('../faqback.svg')] flex justify-center items-center flex-col">
-            <h1 className=" text-2xl font-poppin">{minutes}</h1>
+          <div className="rounded-[26.812px] backdrop-blur-[19.5px] h-[120px] w-[120px] bg-[url('../faqback.svg')] flex justify-center items-center flex-col">
+            <h1 className=" text-4xl font-poppin">{minutes}</h1>
             <span className=" text-md font-poppin">Minutes</span>
           </div>
-          <div className="rounded-[26.812px] backdrop-blur-[19.5px] h-[100px] w-[100px] bg-[url('../faqback.svg')] flex justify-center items-center flex-col">
-            <h1 className=" text-2xl font-poppin" suppressHydrationWarning>{seconds}</h1>
+          <div className="rounded-[26.812px] backdrop-blur-[19.5px] h-[120px] w-[120px] bg-[url('../faqback.svg')] flex justify-center items-center flex-col">
+            <h1 className=" text-4xl font-poppin" suppressHydrationWarning>{seconds}</h1>
             <span className="text-md font-poppin">Seconds</span>
           </div>
         </motion.div>

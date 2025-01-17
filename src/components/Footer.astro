@@ -3,28 +3,49 @@
 ---
 
 <footer
-  class="grid h-40 grid-flow-col grid-cols-3 place-content-center items-center px-10 text-center text-white"
+  class= "bg-gradient-to-b from-[#14183f] to-[#181642] pt-20"
 >
-  <div class="flex justify-center items-center">
-    <img class="block w-[96px]" src="/sparkhacks-logo.svg" alt="logo">
+  <div class="w-full relative overflow-x-hidden flex justify-center">
+    <img src="/octopus1.svg" alt="octopus" class="w-full block min-w-[640px]"/>
+    <img src="/footer-fish1.svg" alt="fish" class="w-[7%] min-w-[44px] absolute block top-[20%] left-[25%] animate-bob-sway-med"/>
+    <img src="/footer-fish2.svg" alt="fish" class="w-[2.5%] min-w-[16px] absolute block top-[30%] right-[25%] animate-bob-sway-fast"/>
   </div>
-  <div>
-    <div>SparkHacks 2025</div>
-    <a class="underline " href="mailto:sparkhacks@uic.edu">sparkhacks@uic.edu</a>
-    <div class="mt-5">Made with 💖 by the SparkHacks team</div>
-  </div>
-  <div class="flex flex-col place-items-center">
-    <p class="font-semibold pb-2">Follow Us</p>
-    <div class="flex flex-row gap-4">
-      <a class="cursor-pointer" target="_blank" href="https://www.instagram.com/sparkhacksuic/">
-        <img src="/instagram.png" class="w-6"/>
-      </a>
-      <a class="cursor-pointer" target="_blank" href="https://github.com/SparkHacks">
-        <img src="/github.png" class="w-6"/>
-      </a>
-      <a class="cursor-pointer" target="_blank" href="https://www.linkedin.com/company/sparkhacks/">
-        <img src="/linkedin.png" class="w-6"/>
-      </a>
+  <div class="grid p-10 grid-flow-row grid-rows-3 tablet:grid-flow-col tablet:grid-cols-3 tablet:grid-rows-1 place-content-center items-center text-center text-white bg-[#0c0c0c] -mt-5">
+    <div class="flex items-center justify-center">
+      <img class="block w-[96px]" src="/sparkhacks-logo.svg" alt="logo" />
+    </div>
+    <div>
+      <div>SparkHacks 2025</div>
+      <a class="underline text-blue-300" href="mailto:sparkhacks@uic.edu"
+        >sparkhacks@uic.edu</a
+      >
+    </div>
+    <div class="flex flex-col place-items-center">
+      <p class="pb-2 font-semibold">Follow Us</p>
+      <div class="flex flex-row gap-4">
+        <a
+          class="cursor-pointer"
+          target="_blank"
+          href="https://www.instagram.com/sparkhacksuic/"
+        >
+          <img src="/instagram.png" class="w-6" />
+        </a>
+        <a
+          class="cursor-pointer"
+          target="_blank"
+          href="https://github.com/SparkHacks"
+        >
+          <img src="/github.png" class="w-6" />
+        </a>
+        <a
+          class="cursor-pointer"
+          target="_blank"
+          href="https://www.linkedin.com/company/sparkhacks/"
+        >
+          <img src="/linkedin.png" class="w-6" />
+        </a>
+      </div>
     </div>
   </div>
+  <div class="bg-[#0c0c0c] text-center text-white px-16 pb-8">Made with 💖 by the SparkHacks team</div>
 </footer>

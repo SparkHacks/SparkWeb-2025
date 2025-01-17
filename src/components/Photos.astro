@@ -1,0 +1,23 @@
+---
+import PhotoSwiper from './PhotoSwiper.jsx'
+---
+
+<section
+  class="flex flex-col items-center bg-gradient-to-b from-[#014E6F] to-[#114372] text-white"
+>
+  <div class="flex place-content-center items-center px-[10%] pb-10">
+    <h1 class="text-5xl font-bold text-center"> ✨ Photos!</h1>
+  </div>
+
+  <div class="container desktop:px-[5%]">
+    <PhotoSwiper client:load />
+  </div>
+</section>
+
+<style>
+  .swiper-slide-active {
+    background-color: red;
+  }
+</style>
+
+

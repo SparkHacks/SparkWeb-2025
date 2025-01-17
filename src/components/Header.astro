@@ -8,8 +8,8 @@ const links = [
 ---
 
 <header 
-  class="header fixed z-30 w-full flex flex-row items-center justify-end backdrop-blur-sm
-  bg-gradient-to-b from-[#041D33] to-[#fff0] px-8 py-9 text-white"
+  class="header fixed z-50 w-full flex flex-row items-center justify-end backdrop-blur-sm
+  bg-gradient-to-b from-[#041D33] to-[#fff0] px-8 py-3 text-white"
 >
   <ul class="flex space-x-11">
     {
@@ -20,7 +20,7 @@ const links = [
       ))
     }
     <li class="apply">
-      <a href="#apply">Apply</a>
+      <a onclick="alert('Registration will be opened soon')" class="cursor-pointer">Apply</a>
     </li>
   </ul>
 </header>
@@ -35,11 +35,14 @@ const links = [
     font-weight: bold;
   }
 
+  .apply:hover {
+    filter: brightness(80%)
+  }
   .apply > a {
     width: 100%;
   }
 
   li > a {
-    font-size: clamp(0.8rem, 2vw, 1.6rem);
+    font-size: clamp(0.8rem, 1.5vw, 1.4rem);
   }
 </style>
