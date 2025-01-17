@@ -7,8 +7,10 @@ import styles from "./styles/Header.module.css"
 const links = [
   { name: 'HackPack', href: '#', svg: "" },
   { name: 'About', href: '#about', svg: "" },
+  { name: 'Workshops', href: '#workshops', svg: ""},
   { name: 'Schedule', href: '#schedule', svg: "" },
   { name: 'Sponsors', href: '#sponsors', svg: "" },
+  { name: 'FAQ', href: '#faq', svg: ""},
 ]
 
 export default function Header2() {
@@ -19,6 +21,8 @@ export default function Header2() {
     setIsMenuOpen(!isMenuOpen);
     controls.start(isMenuOpen ? 'closed' : 'open');
   };
+
+  const handleApply = () => alert("Registration is not opened.")
 
   useEffect(() => {
     const html = document.querySelector("html");
@@ -31,7 +35,7 @@ export default function Header2() {
     <header 
       className="header fixed z-50 w-full flex flex-row items-center justify-end backdrop-blur-sm bg-gradient-to-b from-[#041D33] to-[#fff0] px-8 py-3 text-white"
     >
-      <ul className="space-x-11 hidden tablet:flex">
+      <ul className="space-x-11 hidden min-[820px]:flex">
         {
           links.map((link, index) => (
             <li key={index} className = "flex content-center flex-wrap font-bold">
@@ -40,10 +44,10 @@ export default function Header2() {
           ))
         }
         <li className={styles.apply}>
-          <a onClick={() => alert('Registration will be opened soon')} className="cursor-pointer">Apply</a>
+          <a onClick={handleApply} className="cursor-pointer">Apply</a>
         </li>
       </ul>
-      <div className="tablet:hidden">
+      <div className="min-[820px]:hidden">
         <button
           onClick={toggleMenu}
           className="text-white font-darkline text-[30px] font-normal"
@@ -60,7 +64,7 @@ export default function Header2() {
           closed: { y: '120%' },
         }}
         transition={{ duration: 1 }}
-        className={`tablet:hidden fixed top-0 right-0 h-screen w-full bg-gradient-to-b from-[#014E6F] to-[#041D33] text-white flex justify-center items-center py-[30px]`}
+        className={`min-[820px]:hidden fixed top-0 right-0 h-screen w-full bg-gradient-to-b from-[#014E6F] to-[#041D33] text-white flex justify-center items-center py-[30px]`}
       > 
         <div className="flex flex-col items-center justify-center z-[61]">
           <motion.span 
@@ -81,16 +85,25 @@ export default function Header2() {
                 whileHover={{ scale: 1.2 }}
                 href={link.href}
                 onClick={toggleMenu}
-                className="text-[30px] font-poppin mb-6 flex flex-row gap-2 justify-center items-center"
+                className="mb-6 flex flex-row gap-2 justify-center items-center"
               >
                 <h1>{link.name}</h1>
               </motion.a>
             ))
           }
-
+          <motion.button
+            onClick={handleApply}
+            className={`mb-6 flex flex-row gap-2 justify-center items-center ${styles.apply2}`}
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.3 }}
+            whileHover={{ scale: 1.2 }}
+          >
+            <h1>Apply</h1>
+          </motion.button>
           <motion.button
             onClick={toggleMenu}
-            className="text-[30px] font-poppin mb-6 flex flex-row gap-2 justify-center items-center"
+            className="text-[30px] mb-6 flex flex-row gap-2 justify-center items-center"
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.3 }}

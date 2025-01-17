@@ -5,7 +5,9 @@ import { teamMembers } from "../data/teamMembers"
 <section
   class="flex flex-col w-full items-center bg-gradient-to-b from-[#0c1a39] to-[#14183f] text-white"
 >
-  <h1 class="text-4xl font-bold tracking-wide mt-20">Meet the team</h1> 
+<div class="flex place-content-center items-center px-[10%] pt-20">
+  <h1 class="text-5xl font-bold text-center">🧑‍💻 Meet the Team</h1>
+</div> 
   <div class="flex flex-wrap justify-center gap-7 px-[10%] mt-20">
     {teamMembers.map(member => member.title === "Director" && (
       <div class="w-[250px] flex flex-col items-center">

@@ -6,54 +6,56 @@ import rock from '../../public/whale/right-rock.svg'
 ---
 
 <section
-  class="relative w-full content-center bg-gradient-to-b from-[#014E6F] to-[#114372] text-white"
+  class="flex justify-center pb-28 bg-[#014E6F] text-white"
   id="information"
 >
-   <div class="break-group relative">
+   <!-- <div class="break-group relative">
     <div class="whale-group">
       <img class="whale animate-bob-sway-slow" src={whale.src} />
       <img class="whale-robot animate-bob-sway-med" src={robot.src} />
     </div>
     <img class="right-rock" src={rock.src} />
-  </div>
+  </div> -->
 
-  <div class="flex flex-wrap justify-center gap-28" id="counter-faq">
-    <div class="flex flex-col" id="countdown">
-      <div class="flex justify-center gap-10">
-        <div class="flex animate-bounce" id="chest"></div>
-        <h1 class="font-poppin lg:text-[50px] text-center text-3xl font-bold">
-          Opening In...
+  <div class="flex flex-wrap gap-x-20 gap-y-28 desktop:container px-[10%] desktop:px-[2%] " id="counter-faq">
+    
+    <div class="flex-auto" id="countdown">
+      <div class="flex justify-center items-center">
+        <h1 class="animate-bounce text-5xl mr-4">🌊</h1>
+        <h1 class="font-poppin text-center text-5xl font-bold">
+          Making Waves In...
         </h1>
       </div>
       <Counter client:load />
     </div>
 
-    <div class="flex flex-col">
-      <div class="flex flex-row gap-[10px]">
-        <h1 class="lg:text-[50px] animate-bounce text-5xl">📝</h1>
+    <div class="flex-auto ">
+      <div class="flex justify-center items-center">
+        <h1 class="text-5xl mr-4">🚧
+        </h1>
         <h1
-          class="font-poppin lg:text-[50px] text-center text-3xl font-bold text-white mb-[40px]"
+          class="font-poppin text-center text-5xl font-bold text-white "
         >
-          Resources & FAQ
+          Resources
         </h1>
       </div>
 
-      <a
-        href=" https://www.notion.so/HackPack-2025-16c1bf81ade280e9b4f6ea19a572a181?pvs=4"
+      <div class="flex justify-center">
+        <a
+        href="https://example.com"
         target="_blank"
-        class="mt-5 flex h-[100px] w-[300px] flex-col items-center justify-center bg-[url('../faqback.svg')] backdrop-blur-[19.5px]"
-      >
-        <h1 class="text-md font-poppin text-white">Click to view</h1>
-        <h1 class="font-poppin text-2xl text-white">Hack Pack</h1>
-      </a>
+        class="mt-5 flex h-[120px] w-[300px] flex-col items-center justify-center bg-[url('../faqback.svg')] backdrop-blur-[19.5px]"
+        >
+          <!-- <h1 class="text-lg font-poppin text-white">Click to view</h1> -->
+          <h1 class="font-poppin text-3xl text-white">Under Construction</h1>
+        </a>
+      </div>
     </div>
   </div>
 </section>
 
-<style>
-  #counter-faq {
-    margin-top: -100px;
-  }
+
+<!-- <style>
 
   #chest {
     background: url('../chest.svg');
@@ -63,20 +65,6 @@ import rock from '../../public/whale/right-rock.svg'
     background-size: 75px;
   }
 
-  #paper {
-    width: 75px;
-    height: 75px;
-    background-repeat: no-repeat;
-  }
-
-  .break-group {
-    margin-top: -20px;
-    width: 100%;
-    top: 0;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-  }
   .whale-group {
     display: flex;
     flex-direction: row;
@@ -101,4 +89,4 @@ import rock from '../../public/whale/right-rock.svg'
     width: 25%;
     right: 5%;
   }
-</style>
+</style> -->
