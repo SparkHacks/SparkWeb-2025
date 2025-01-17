@@ -1,7 +1,7 @@
 ---
 const schedulingData = [
   {
-    date: 'February 7th',
+    date: 'Day 1: February 7th',
     day: 'Friday',
     events: [
       {
@@ -27,7 +27,7 @@ const schedulingData = [
     ],
   },
   {
-    date: 'February 8th',
+    date: 'Day 2: February 8th',
     day: 'Saturday',
     events: [
       {
@@ -75,21 +75,27 @@ const schedulingData = [
     <h1 class="text-5xl font-bold text-center"> 📅 Schedule</h1>
   </div>
 
-  <div class="my-10 flex flex-wrap justify-center gap-28">
+  <div class="my-10 flex flex-wrap justify-center gap-28 ">
     {
         
       schedulingData.map((day) => (
-        <div class= "max-w-full flex h-[600px] p-[40px] bg-no-repeat bg-[url('../schedback.svg')]">
-        <div class=" font-poppin flex-col flex w-[350px] text-white border-none ">
-          <h1 class="text-3xl font-[700]">{day.date}</h1>
+        <div class= "max-w-full flex p-12 pb-20 bg-cover bg-[url('../schedback.svg')]">
+        <div class=" font-poppin flex-col flex w-[350px] text-white border-none h-[40rem]">
+          <h1 class="text-3xl font-[700] pt-10">{day.date}</h1>
           <h1 class="font-poppin mb-5 text-2xl font-[500]">{day.day}</h1>
-          <div class="flex flex-col gap-5">
+
+          {/* Placeholder */}
+          <div class="flex flex-col justify-center h-[100%]">
+            <h1 class="text-9xl text-center ">🚧</h1>
+            <h1 class="text-5xl text-center pt-5">TBD</h1>
+          </div>
+          {/* <div class="flex flex-col gap-5">
             {day.events.map((event) => (
               <p class="text-lg">
                 <span class="font-extrabold">{event.time}</span> | {event.title}
               </p>
             ))}
-          </div>
+          </div> */}
         </div>
         {/* <div class= "flex" id="mini-jelly"></div> */}
     </div>
