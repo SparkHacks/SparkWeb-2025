@@ -20,38 +20,38 @@ export default function PhotoSwiper() {
       }}
       >
         <SwiperSlide>
-          <div class="object-cover flex flex-col justify-center items-center">
-            <img class="h-[430px]" src="../photos/build.png"/>
+          <div class="object-cover flex flex-col justify-center items-center px-[10%] desktop:px-[0%]">
+            <img class="m-h-[430px]" src="../photos/build.png"/>
             <h1 class='text-4xl py-10 text-center'>Build your resume!</h1>
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div class="object-cover flex flex-col justify-center items-center">
-            <img class="h-[430px]" src="../photos/compete.png"/>
+          <div class="object-cover flex flex-col justify-center items-center px-[10%] desktop:px-[0%]">
+            <img class="m-h-[430px]" src="../photos/compete.png"/>
             <h1 class='text-4xl py-10 text-center'>Compete with your peers!</h1>
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div class="object-cover flex flex-col justify-center items-center">
-            <img class="h-[430px]" src="../photos/eat.png"/>
+          <div class="object-cover flex flex-col justify-center items-center px-[10%] desktop:px-[0%]">
+            <img class="m-h-[430px]" src="../photos/eat.png"/>
             <h1 class='text-4xl py-10 text-center'>Eat good food!</h1>
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div class="object-cover flex flex-col justify-center items-center">
-            <img class="h-[430px]" src="../photos/speak.png"/>
+          <div class="object-cover flex flex-col justify-center items-center px-[10%] desktop:px-[0%]">
+            <img class="m-h-[430px]" src="../photos/speak.png"/>
             <h1 class='text-4xl py-10 text-center'>Speak with recruiters!</h1>
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div class="object-cover flex flex-col justify-center items-center">
-            <img class="h-[430px]" src="../photos/become.png"/>
+          <div class="object-cover flex flex-col justify-center items-center px-[10%] desktop:px-[0%]">
+            <img class="m-h-[430px]" src="../photos/become.png"/>
             <h1 class='text-4xl py-10 text-center'>Become more technical!</h1>
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div class="object-cover flex flex-col justify-center items-center">
-            <img class="h-[430px]" src="../photos/win.png"/>
+          <div class="object-cover flex flex-col justify-center items-center px-[10%] desktop:px-[0%]">
+            <img class="m-h-[430px]" src="../photos/win.png"/>
             <h1 class='text-4xl py-10 text-center'>Win cool prizes!</h1>
           </div>
         </SwiperSlide>
