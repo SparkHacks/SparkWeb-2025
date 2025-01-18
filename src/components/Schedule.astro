@@ -68,7 +68,7 @@ const schedulingData = [
 ---
 
 <section
-  class="w-full content-center bg-gradient-to-b from-[#114372] to-[#041D33] text-white pt-20  px-[10%] desktop:px-[0%]"
+  class="w-full content-center bg-gradient-to-b from-[#114372] to-[#041D33] text-white pt-20 px-[0%]"
   id="schedule"
 >
   <div class="flex place-content-center items-center px-[10%] ">
@@ -79,7 +79,7 @@ const schedulingData = [
     {
         
       schedulingData.map((day) => (
-        <div class= "max-w-full flex p-12 pb-20 bg-cover bg-[url('../schedback.svg')]">
+        <div class= "max-w-full flex py-12 px-10 tablet:px-24 pb-20 bg-cover bg-[url('../schedback.svg')]">
         <div class=" font-poppin flex-col flex w-[350px] text-white border-none h-[40rem]">
           <h1 class="text-3xl font-[700] pt-10">{day.date}</h1>
           <h1 class="font-poppin mb-5 text-2xl font-[500]">{day.day}</h1>
