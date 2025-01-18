@@ -9,11 +9,11 @@ const links = [
   { name: 'About', href: '#about', svg: "" },
   { name: 'Workshops', href: '#workshops', svg: ""},
   { name: 'Schedule', href: '#schedule', svg: "" },
-  { name: 'Sponsors', href: '#sponsors', svg: "" },
   { name: 'FAQ', href: '#faq', svg: ""},
+  { name: 'Sponsors', href: '#sponsors', svg: "" },
 ]
 
-export default function Header2() {
+export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const controls = useAnimation();
 
