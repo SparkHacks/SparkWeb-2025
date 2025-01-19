@@ -4,7 +4,7 @@ import { motion  } from 'framer-motion';
 const sponsors = [
   {
     name: "CME Group",
-    image: "../sponsors/cmegroup.svg",
+    image: "../sponsors/cme-logo.png",
   },
   {
     name: "UIC CS Department",
