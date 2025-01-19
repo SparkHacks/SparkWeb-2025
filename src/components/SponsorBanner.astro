@@ -5,33 +5,28 @@ import Sponsor from '../components/Sponsor';
 ---
 
 <section class="w-full content-center text-white bg-gradient-to-b from-[#0a1b37] to-[#0c1b39]" id="sponsors">
-    <h1 class="z-[1] flex w-full flex-row items-center justify-center gap-5 pt-20 text-5xl font-bold text-white md:flex-row mb-[40px]">
+  <h1 class="z-[1] flex w-full flex-row items-center justify-center gap-5 pt-20 text-5xl font-bold text-white md:flex-row mb-[40px]">
     Sponsors
     <div class="flex animate-bob-sway-med" id="pink-jelly"></div></div>
   </h1>
-  <!-- <div class="flex flex-row justify-between mx-[15px] mb-[-80px]">
-    <img class="sponsor-creature block w-[96px]" src="public/sponsors/crab.svg" />
-    <img class="sponsor-creature animate-bob-sway-med block w-[96px]" src="public/sponsors/seahorse.svg" />
-    <img class="sponsor-creature block w-[96px]" src="public/sponsors/starfish.svg"/>
-    <img class="sponsor-creature animate-bob-fast  block h-[96px]" src="public/threejelly.svg"  />
-    <img class="sponsor-creature block w-[96px]" src="public/sponsors/greenfish.svg" />
-    <img class="sponsor-creature animate-bob-sway-med block w-[96px]" src="public/sponsors/orangefish.svg"  />
-  </div> -->
+  <div class="h-fit w-auto flex flex-wrap justify-between mx-[15px] mb-[-80px]">
+    <img class="sponsor-creature animate-bob-med block w-[96px]" src="sponsors/crab.svg" />
+    <img class="sponsor-creature animate-bob-sway-med block w-[96px]" src="sponsors/seahorse.svg" />
+    <img class="sponsor-creature block w-[96px]" src="sponsors/starfish.svg"/>
+    <img class="sponsor-creature animate-bob-sway-med block w-[96px]" src="sponsors/orangefish.svg"  />
+  </div>
+  <div class="w-full h-[318px] absolute z-0">
+    <img src="/sponsors/banner.svg" class="size-full" />
+  </div>
   <Sponsor client:load/>
-  <!-- <div class="flex flex-row justify-between mx-[80px] mt-[-20px]">
-    <img class="sponsor-creature animate-bob-sway-med block w-[96px]" src="public/sponsors/orangefish.svg"  />
-    <img class="sponsor-creature block h-[96px]" src="public/threefish.svg"  />
-    <img class="sponsor-creature animate-bob-sway-med block w-[96px]" src="public/sponsors/greenwhale.svg"  />
-    <img class="sponsor-creature block w-[96px]" src="public/sponsors/turtle.svg"  />
-    <img class="sponsor-creature animate-bob-slow block w-[96px]" src="public/sponsors/orangefish.svg"  />
-    <img class="sponsor-creature block w-[96px]" src="public/sponsors/seahorse.svg" />
-    <img class="sponsor-creature animate-bob-sway-med block w-[96px]" src="public/sponsors/crab.svg" />
-  </div> -->
+  <div class="h-fit w-auto flex flex-wrap justify-between mx-[80px] mt-[-20px]">
+    <img class="sponsor-creature animate-bob-sway-med block w-[96px]" src="sponsors/orangefish.svg"  />
+    <img class="sponsor-creature block w-[96px]" src="sponsors/greenwhale.svg"  />
+    <img class="sponsor-creature animate-bob-sway-med block w-[96px]" src="sponsors/turtle.svg"  />
+  </div>  
+</section>
   
-  </section>
-  
-  <style>
-
+<style>
 #pink-jelly {
    background: url('../pinkjelly.svg'); 
    width: 75px;
@@ -41,5 +36,9 @@ import Sponsor from '../components/Sponsor';
    /* animation: swim 4s infinite; */
 }
 
+.sponsor-creature {
+  position: relative;
+  z-index: 1;
+}
 </style>
   
