@@ -51,8 +51,8 @@ export default function Sponsor(){
       variants={maequeeSponsor}
       animate="animate"
       className="flex flex-row w-full gap-[30px] mt-10 items-center">
-        {expandedSponsors.map((sponsor) => 
-          <div key={sponsor.name}  className=' group relative flex justify-center items-center min-h-[160px]'>
+        {expandedSponsors.map((sponsor, i) => 
+          <div key={sponsor.name + i}  className=' group relative flex justify-center items-center min-h-[160px]'>
             <span className=' shadow-[0px_0px_4px_0px_#FFDAB9] rounded-[26.812px] border-4 border-solid border-[#CDA5C7] backdrop-blur-[19.5px]  absolute opacity-0 scale-0 transition-all group-hover:opacity-100 group-hover:scale-100  w-[70%] text-center text-[white] font-poppin '>{sponsor.name}</span>
             <img src={sponsor.image} width="250" height="250" className="object-contain min-w-[250px]"/>    
           </div>
