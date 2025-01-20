@@ -14,8 +14,13 @@ import tree from '../../public/svgs/palm-tree.svg'
 >
 
   <div class="absolute top-0 w-full h-full background-layer overflow-hidden">
-    <img class="moon-clouds absolute left-1/3 tablet:left-[50%] w-3/5 max-w-sm top-14" src="/heroPageNew/MoonAndClouds.svg" />
-    <img class="dolphin z-40 absolute left-1/3 tablet:left-[40%] bottom-6 max-w-[20%] drop-shadow-xl" src="/heroPageNew/Dolphin.svg" />
+    <div class="pl-14 moon-clouds absolute left-1/3 tablet:left-[50%] w-3/5 max-w-sm top-10">
+      <!-- <img class="moon-clouds absolute left-1/3 tablet:left-[50%] w-3/5 max-w-sm top-14" src="/heroPageNew/MoonAndClouds.svg" /> -->
+      <img class="moon" src="/heroPageNew/moon-and-clouds/Moon.svg" />
+      <img class="cloud1" src="/heroPageNew/moon-and-clouds/Cloud-1.svg" />
+      <img class="cloud" src="/heroPageNew/moon-and-clouds/Cloud.svg" />
+    </div>
+    <img class="dolphin z-40 absolute left-1/3 bottom-6 max-w-[20%] drop-shadow-xl" src="/heroPageNew/Dolphin.svg" />
     <div class="island-group right-[-500px] min-w-[500px]">
       <img class="ground island" src="/heroPageNew/Island.svg" />
       <img class="tree1" src="/heroPageNew/Tree.svg" />
@@ -114,5 +119,58 @@ import tree from '../../public/svgs/palm-tree.svg'
   .hero {
     /* background: linear-gradient(160deg, #0880ca 24.6%, #7dfff4 92.52%); */
     background-image: linear-gradient(180deg, #002242 0%, #0e477c 47%, #855186 70%, #e06e8d 86%, #ff8d7e 100%)
+  }
+
+  @keyframes jump {
+    0%, 100% {
+      transform: translateY(0) rotate(0deg);
+    }
+    50% {
+      transform: translateY(-20px) rotate(-5deg);
+    }
+  }
+
+  .dolphin {
+    animation: jump 3s ease-in-out infinite;
+    transform-origin: center bottom;
+  }
+
+  @keyframes cloud-float {
+    0%, 100% {
+      transform: translateX(0) translateY(0);
+    }
+    50% {
+      transform: translateX(10px) translateY(-5px);
+    }
+  }
+
+  @keyframes moon-float {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-5px);
+    }
+  }
+
+  .cloud {
+    scale: .8;
+    position: absolute;
+    left: -110px;
+    top: 55px;
+    animation: cloud-float 5s ease-in-out infinite;
+  }
+  .cloud1 {
+    scale: .8;
+    position: absolute;
+    left: 145px;
+    top: 100px;
+    animation: cloud-float 5s ease-in-out infinite reverse;
+    animation-delay: -1s;
+  }
+  .moon {
+    scale: .9;
+    position: absolute;
+    animation: moon-float 5s ease-in-out infinite;
   }
 </style>
