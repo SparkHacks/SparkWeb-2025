@@ -93,7 +93,7 @@ export default function Header() {
           }
           <motion.button
             onClick={handleApply}
-            className={`mb-6 flex flex-row gap-2 justify-center items-center ${styles.apply2}`}
+            className={`cursor-pointermb-6 flex flex-row gap-2 justify-center items-center ${styles.apply2}`}
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.3 }}
@@ -103,7 +103,7 @@ export default function Header() {
           </motion.button>
           <motion.button
             onClick={toggleMenu}
-            className="text-[30px] mb-6 flex flex-row gap-2 justify-center items-center"
+            className="text-[30px] mb-6 flex flex-row gap-2 justify-center items-center py-10"
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.3 }}
