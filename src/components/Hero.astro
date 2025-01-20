@@ -140,7 +140,15 @@ import tree from '../../public/svgs/palm-tree.svg'
       transform: translateX(0) translateY(0);
     }
     50% {
-      transform: translateX(10px) translateY(-5px);
+      transform: translateX(12px) translateY(-5px);
+    }
+  }
+  @keyframes cloud-float1 {
+    0%, 100% {
+      transform: translateX(0) translateY(0);
+    }
+    50% {
+      transform: translateX(-12px) translateY(-5px);
     }
   }
 
@@ -152,7 +160,7 @@ import tree from '../../public/svgs/palm-tree.svg'
       transform: translateY(-5px);
     }
   }
-
+  
   .cloud {
     scale: .8;
     position: absolute;
@@ -165,12 +173,11 @@ import tree from '../../public/svgs/palm-tree.svg'
     position: absolute;
     left: 145px;
     top: 100px;
-    animation: cloud-float 5s ease-in-out infinite reverse;
-    animation-delay: -1s;
+    animation: cloud-float1 5s ease-in-out infinite;
   }
   .moon {
     scale: .9;
     position: absolute;
-    animation: moon-float 5s ease-in-out infinite;
+    animation: moon-float 5s ease-in-out infinite, glow 5s ease-in-out infinite;
   }
 </style>
