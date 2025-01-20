@@ -62,6 +62,74 @@ const faqQuestions = [
       'All SparkHacks resources, including guidelines, workshops, resources to help you best prepare, and other relevant information, is currently available in the HackPack.',
   },
 ]
+
+const newFaqQuestions = [
+  {
+    "question": "Is there a fee to participate?",
+    "answer": "Nope! SparkHacks is completely free. We’ll provide meals, swag, and all the resources you need during the event."
+  },
+  {
+    "question": "Can I participate if I’m new to hackathons?",
+    "answer": "Absolutely! SparkHacks is beginner-friendly, with workshops, mentors, and resources to help you get started."
+  },
+  {
+    "question": "Can I participate alone?",
+    "answer": "Solo participation isn’t allowed—teams must have 4-5 members."
+  },
+  {
+    "question": "Can my team include members from outside UIC?",
+    "answer": "No. SparkHacks is exclusively for current UIC students."
+  },
+  {
+    "question": "Can I change teams during the hackathon?",
+    "answer": "Teams are finalized once hacking begins, so plan your team in advance."
+  },
+  {
+    "question": "Do I need coding experience to participate?",
+    "answer": "Not at all! You can contribute to brainstorming, design, and presentations, and we even have a no-code track for designers."
+  },
+  {
+    "question": "Can I work on a project I started before the hackathon?",
+    "answer": "No. All projects must be created during the 24-hour hackathon timeframe."
+  },
+  {
+    "question": "Do I need to follow the theme of the hackathon for my project?",
+    "answer": "The event theme sets the vibe, but your project doesn’t need to align with it unless you’re participating in a specific themed challenge or track."
+  },
+  {
+    "question": "How are projects judged?",
+    "answer": "Projects are judged on innovation, usability, technical complexity (or design for no-code), and overall impact. Check the Judging Criteria section for more details."
+  },
+  {
+    "question": "Are there workshops during the hackathon?",
+    "answer": "Yes! We’ll host pre-hack workshops (Feb 4-6) and technical sessions during the event to help you learn new skills."
+  },
+  {
+    "question": "How can I connect with mentors?",
+    "answer": "You can reach mentors through the #mentor-queue channel on Discord or meet them in person at the mentoring areas."
+  },
+  {
+    "question": "What do I need to bring?",
+    "answer": "Bring your UIC ID, laptop, chargers, headphones, power bank, and any personal items you’ll need for the 24 hours."
+  },
+  {
+    "question": "Will food be provided?",
+    "answer": "Yes! We’ve got you covered with meals and snacks throughout the event."
+  },
+  {
+    "question": "Is there a place to sleep?",
+    "answer": "SparkHacks is a 24-hour event, so no sleeping areas are provided. If you need to rest, plan your own accommodations."
+  },
+  {
+    "question": "What if I have technical issues during the event?",
+    "answer": "Reach out to the #ask-organizers channel on Discord or find an organizer dressed in [distinguishing feature, e.g., SparkHacks t-shirts or badges] for immediate assistance."
+  },
+  {
+    "question": "Who do I contact if I have more questions?",
+    "answer": "You can: Ask questions in the #ask-organizers channel on Discord. Email us at sparkhacks@uic.edu. Message us on social media."
+  }
+]
+
 ---
 
 <section
@@ -75,7 +143,7 @@ const faqQuestions = [
 
   <div class="desktop:container px-[10%] desktop:px-[2%]  md:flex-row flex flex-wrap justify-center" >
     {
-      faqQuestions.map((faq) => (
+      newFaqQuestions.map((faq) => (
         <div class="flex-start relative flex min-h-[100px] flex-col text-white">
           <div
             id="question"
@@ -124,7 +192,7 @@ const faqQuestions = [
   height: 20px;
   width: 20px;
   content: "";
-  background-image: url('../../faq/arrow.png');
+  background-image: url('../../faq/dropdown.svg');
   transition: transform 0.3s ease;
 }
 
