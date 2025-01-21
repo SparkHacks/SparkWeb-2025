@@ -30,16 +30,20 @@ import tree from '../../public/svgs/palm-tree.svg'
     </div>
   </div>
 
-  <div class="relative pt-16 h-[80vh] flex items-center z-[49]">
+  <div class="flex pt-16 h-[80vh] items-center z-[40] desktop:w-1/2 desktop:justify-center whitespace-nowrap ">
     <!-- SparkHacks Logo + CTA -->
-    <div class="flex flex-col items-start space-y-2 pb-4 pl-3 tablet:pl-10 tablet:w-3/5">
-      <img class="w-1/2 max-w-fit tablet:max-w-[18rem]" src="/heroPageNew/logo-night.svg" alt="logo">
+    <div class="flex flex-col items-center tablet:items-start content-center space-y-2 pb-4 pl-3 tablet:pl-10 tablet:w-3/5 desktop:w-auto ">
+      <img class="w-7/12 max-w-fit tablet:max-w-[18rem] desktop:max-w-[40rem] tablet:pl-5" src="/heroPageNew/logo-night.svg" alt="logo">
       <h1 class="title text-5xl tablet:text-7xl font-bold px-4 tablet:px-8 text-[#ffffff] z-30">
         Sparkhacks 2025
       </h1>
-      <h1 class="date text-3xl text-[#F6B09C] tablet:text-6xl font-bold px-4 tablet:px-8 z-30">
+      <h1 class="date text-3xl text-[#F6B09C]  tablet:text-6xl font-bold px-4 tablet:px-8 z-30">
         FEB 07-08
       </h1>
+      <div class="flex gap-10 px-4 tablet:px-8 z-40">
+          <a class="cursor-pointer text-center bg-white fill-up-animation hover:text-white w-40 p-3 rounded-xl border-white border-solid border-4 text-black text-lg relative hover:scale-105 ease-in" href="dashboard.sparkhacks.org">Apply Now</a>
+        <a class="cursor-pointer text-center fill-up-animation backdrop-blur tablet:bg-opacity-0 w-40 p-3 rounded-xl border-white border-solid border-4 text-white text-lg relative hover:scale-105 ease-in" href="#about">Learn More</a>
+      </div>
     </div>
 
     <!-- <div class="overflow-y-hidden absolute bottom-0 right-[10.3%] w-1/3 z-10">
@@ -62,6 +66,57 @@ import tree from '../../public/svgs/palm-tree.svg'
 
 
 <style>
+
+  .fill-up-animation::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        top: 0;
+        border-radius: 8px;
+        z-index: -1;
+    }
+
+  .fill-up-animation:hover::before {
+    background-color: #2C5A79;
+    animation: loadingWave 2s linear;
+  }
+
+  @keyframes loadingWave {
+      0% {
+          clip-path: polygon(0% 100%, 100% 100%, 99% 100%, 81% 100%, 64% 100%, 46% 100%, 29% 100%, 14% 100%, 0 100%); 
+      }
+
+      10% {
+          clip-path: polygon(0% 100%, 100% 100%, 100% 90%, 84% 94%, 66% 95%, 47% 94%, 31% 95%, 14% 96%, 0 94%);    
+      }
+
+      20% {
+          clip-path: polygon(0% 100%, 100% 100%, 100% 74%, 81% 72%, 63% 72%, 44% 75%, 33% 77%, 16% 78%, 0 74%);                
+      }
+
+      40% {
+          clip-path: polygon(0% 100%, 100% 100%, 100% 53%, 85% 55%, 67% 58%, 44% 54%, 30% 48%, 15% 47%, 0 49%);                
+      }
+
+      60% {
+          clip-path: polygon(0% 100%, 100% 100%, 100% 24%, 86% 25%, 69% 29%, 53% 34%, 37% 38%, 18% 40%, 0 38%); 
+      }
+      
+      80% {
+          clip-path: polygon(0% 100%, 100% 100%, 100% 22%, 84% 29%, 67% 31%, 45% 27%, 26% 17%, 12% 14%, 0 15%);    
+      }
+
+      90% {
+          clip-path: polygon(0% 100%, 100% 100%, 100% 5%, 86% 10%, 73% 10%, 55% 6%, 33% 3%, 15% 5%, 0 9%);   
+      }
+
+      100% {
+          clip-path: polygon(0% 100%, 100% 100%, 100% 0, 86% 0, 71% 0, 55% 0, 34% 0, 18% 0, 0 0);    
+      }
+    }
+
   .island-group {
     position: absolute;
     right: 0;
