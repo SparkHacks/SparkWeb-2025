@@ -103,7 +103,7 @@ export default function Header() {
           </motion.button>
           <motion.button
             onClick={toggleMenu}
-            className="text-[30px] mb-6 flex flex-row gap-2 justify-center items-center py-10"
+            className="text-[30px] flex flex-row gap-2 justify-center items-center mt-5"
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.3 }}
