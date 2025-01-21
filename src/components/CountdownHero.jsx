@@ -31,7 +31,7 @@ function useTimer(deadline, interval = SECOND) {
 
 
 export default function Information() {
-  const { days, hours, minutes, seconds } = useTimer("2025-01-22UT14:00:00.000Z");
+  const { days, hours, minutes, seconds } = useTimer("2025-01-22T14:00:00.000Z");
 
 
   return(
