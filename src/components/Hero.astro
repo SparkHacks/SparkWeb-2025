@@ -6,6 +6,7 @@ import volcanoCloud from '../../public/svgs/volcano-cloud.svg'
 import volcanoLava from '../../public/svgs/volcano-lava.svg'
 import island from '../../public/svgs/island.svg'
 import tree from '../../public/svgs/palm-tree.svg'
+import Counter from '../components/CountdownHero'
 ---
 
 
@@ -22,7 +23,7 @@ import tree from '../../public/svgs/palm-tree.svg'
       <img class="cloud1" src="/heroPageNew/moon-and-clouds/Cloud-1.svg" />
       <img class="cloud" src="/heroPageNew/moon-and-clouds/Cloud.svg" />
     </div>
-    <img class="dolphin z-40 absolute left-1/3 bottom-6 max-w-[20%] drop-shadow-xl" src="/heroPageNew/Dolphin.svg" />
+    <img class="dolphin z-40 absolute left-[45%] bottom-6 max-w-[20%] drop-shadow-xl" src="/heroPageNew/Dolphin.svg" />
     <div class="island-group right-[-500px] min-w-[500px]">
       <img class="ground island" src="/heroPageNew/Island.svg" />
       <img class="tree1" src="/heroPageNew/Tree.svg" />
@@ -30,20 +31,25 @@ import tree from '../../public/svgs/palm-tree.svg'
     </div>
   </div>
 
-  <div class="flex pt-16 h-[80vh] items-center z-[40] desktop:w-1/2 desktop:justify-center whitespace-nowrap ">
+  <div class="relative flex pt-16 h-[80vh] items-center z-[60] desktop:w-1/2 desktop:justify-center whitespace-nowrap ">
     <!-- SparkHacks Logo + CTA -->
-    <div class="flex flex-col items-center tablet:items-start content-center space-y-2 pb-4 pl-3 tablet:pl-10 tablet:w-3/5 desktop:w-auto ">
-      <img class="w-7/12 max-w-fit tablet:max-w-[18rem] desktop:max-w-[40rem] tablet:pl-5" src="/heroPageNew/logo-night.svg" alt="logo">
-      <h1 class="title text-5xl tablet:text-7xl font-bold px-4 tablet:px-8 text-[#ffffff] z-30">
+    <div class="flex flex-col items-center tablet:items-start content-center space-y-2 pb-4 pl-0 tablet:pl-10 w-full tablet:w-3/5 desktop:w-auto ">
+      <img class="w-7/12 max-w-fit tablet:max-w-[18rem] tablet:pl-5" src="/heroPageNew/logo-night.svg" alt="logo">
+      <h1 class="title text-4xl tablet:text-6xl desktop:text-7xl font-bold p-0 tablet:pl-8 text-[#ffffff] z-30">
         Sparkhacks 2025
       </h1>
-      <h1 class="date text-3xl text-[#F6B09C]  tablet:text-6xl font-bold px-4 tablet:px-8 z-30">
+      <h1 class="date text-2xl tablet:text-5xl desktop:text-6xl text-[#F6B09C] font-bold px-0 tablet:pl-8 z-30">
         FEB 07-08
       </h1>
-      <div class="flex gap-10 px-4 tablet:px-8 z-40">
-          <a class="cursor-pointer text-center bg-white fill-up-animation hover:text-white w-40 p-3 rounded-xl border-white border-solid border-4 text-black text-lg relative hover:scale-105 ease-in" href="dashboard.sparkhacks.org">Apply Now</a>
+      <div class="flex justify-around px-0 w-full tablet:w-auto gap-4 tablet:pl-8 z-40">
+          <!-- <a class="cursor-pointer text-center bg-white fill-up-animation hover:text-white w-40 p-3 rounded-xl border-white border-solid border-4 text-black text-lg relative hover:scale-105 ease-in" href="dashboard.sparkhacks.org">Apply Now</a> -->
+          <a class="cursor-pointer text-center backdrop-blur-[100px] w-40 p-3 rounded-xl border-solid border-4 border-[#c9a5cf] text-white text-lg relative hover:scale-105 ease-in" href="#" id="apply">Apply Now</a>
         <a class="cursor-pointer text-center fill-up-animation backdrop-blur tablet:bg-opacity-0 w-40 p-3 rounded-xl border-white border-solid border-4 text-white text-lg relative hover:scale-105 ease-in" href="#about">Learn More</a>
       </div>
+      <div class="flex text-center justify-center text-2xl w-full  tablet:w-auto tablet:pl-8 z-40 text-white">Registration opens in...</div>
+      <div class="flex justify-around px-0 w-full tablet:w-auto gap-4 tablet:pl-8 z-40" id="countdown">
+        <Counter client:load/>
+        </div>
     </div>
 
     <!-- <div class="overflow-y-hidden absolute bottom-0 right-[10.3%] w-1/3 z-10">
@@ -153,11 +159,11 @@ import tree from '../../public/svgs/palm-tree.svg'
     
    }
 
-  @media (min-width: 1133px) {
+  /* @media (min-width: 1133px) {
     .dolphin {
       left: clamp(680px, 50%, 50%);
     }
-  }
+  } */
 
   .island {
     z-index: 31;
@@ -242,6 +248,42 @@ import tree from '../../public/svgs/palm-tree.svg'
     background-image: url("/heroPageNew/stars-pattern.svg");
     width:100%;
     height: 100%;
-    mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, .3) 30%, rgba(0, 0, 0, 0));
+    mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 1) 30%, rgba(0, 0, 0, 0) 80%);
   }
+
+  @keyframes pulse {
+  0% {
+    transform: scale(1);
+    
+  }
+  50% {
+    transform: scale(1.1);
+    
+  }
+  100% {
+    transform: scale(1);
+    
+  }
+}
+
+.pulse-animation {
+  animation: pulse 2s ease-in-out infinite;
+}
+
 </style>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+  const apply = document.querySelector('#apply');
+  const countdown = document.querySelector('#countdown');
+
+  apply.addEventListener('mouseover', () => {
+    countdown.classList.add('pulse-animation');
+  });
+
+  apply.addEventListener('mouseout', () => {
+    countdown.classList.remove('pulse-animation');
+  });
+});
+
+</script>

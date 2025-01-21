@@ -48,6 +48,12 @@ export const teamMembers = [
     linkedin: "https://www.linkedin.com/in/naga-maddipudi/"
   },
   {
+    name: "Karina Latasiewicz",
+    title: "Logistics - Team Lead",
+    image: "/team/karina.JPG",
+    linkedin: "https://www.linkedin.com/in/karina-latasiewicz/"
+  },
+  {
     name: "Kevin Cordero",
     title: "Web Development - Team Lead",
     image: "/team/kevin.JPG",
@@ -88,12 +94,6 @@ export const teamMembers = [
     title: "Logistics",
     image: "/team/gerard.JPG",
     linkedin: "https://www.linkedin.com/in/gerard-wilbert-a94636291/"
-  },
-  {
-    name: "Karina Latasiewicz",
-    title: "Logistics",
-    image: "/team/karina.JPG",
-    linkedin: "https://www.linkedin.com/in/karina-latasiewicz/"
   },
   {
     name: "Nathan Trinh",
