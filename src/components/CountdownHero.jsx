@@ -31,7 +31,7 @@ function useTimer(deadline, interval = SECOND) {
 
 
 export default function Information() {
-  const { days, hours, minutes, seconds } = useTimer("2025-01-22UT8:00:36.004Z");
+  const { days, hours, minutes, seconds } = useTimer("2025-01-22UT14:00:00.000Z");
 
   return(
 
@@ -40,22 +40,22 @@ export default function Information() {
         whileInView={{ opacity: 100, y:0 }}
         transition={{ duration: 1 }}
         viewport={{ once: true, amount: .5  }}
-        className="w-full flex flex-wrap items-center justify-center gap-[20px] mt-0 text-white">
-          <div className="rounded-[26.812px] backdrop-blur-[19.5px] h-[80px] w-[80px]  flex justify-center items-center border-4 flex-col">
+        className="w-full flex flex-wrap items-center justify-center gap-4 mt-0 text-white">
+          <div className="rounded-[26.812px] backdrop-blur h-[80px] w-[80px] border-white  flex justify-center items-center border-4 flex-col">
             <h1 className="text-2xl font-poppin">{days}</h1>
             <span className="text-md font-poppin">Days</span>
           </div>
           
-          <div className="rounded-[26.812px] backdrop-blur-[19.5px]  h-[80px] w-[80px]  flex justify-center items-center border-4 flex-col">
+          <div className="rounded-[26.812px] backdrop-blur border-white h-[80px] w-[80px]  flex justify-center items-center border-4 flex-col">
             <h1 className=" text-2xl font-poppin">{hours}</h1>
             <span className="text-md font-poppin">Hours</span>
           </div>
-          <div className="rounded-[26.812px] backdrop-blur-[19.5px]  h-[80px] w-[80px]  flex justify-center items-center border-4 flex-col">
+          <div className="rounded-[26.812px] backdrop-blur border-white  h-[80px] w-[80px]  flex justify-center items-center border-4 flex-col">
             <h1 className=" text-2xl font-poppin">{minutes}</h1>
             <span className=" text-md font-poppin">Minutes</span>
           </div>
-          <div className="rounded-[26.812px] backdrop-blur-[19.5px]  h-[80px] w-[80px]   flex justify-center items-center border-4 flex-col">
-            <h1 className=" text-2xl font-poppin" suppressHydrationWarning>{seconds}</h1>
+          <div className="rounded-[26.812px] backdrop-blur h-[80px] w-[80px]  border-white flex justify-center items-center border-4 flex-col">
+            <h1 className=" text-2xl font-poppin">{seconds}</h1>
             <span className="text-md font-poppin">Seconds</span>
           </div>
         </motion.div>

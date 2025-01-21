@@ -43,13 +43,13 @@ import Counter from '../components/CountdownHero'
       </h1>
       <div class="flex justify-around px-0 w-full tablet:w-auto gap-4 tablet:pl-8 z-40">
           <!-- <a class="cursor-pointer text-center bg-white fill-up-animation hover:text-white w-40 p-3 rounded-xl border-white border-solid border-4 text-black text-lg relative hover:scale-105 ease-in" href="dashboard.sparkhacks.org">Apply Now</a> -->
-          <a class="cursor-pointer text-center backdrop-blur-[100px] w-40 p-3 rounded-xl border-solid border-4 border-[#c9a5cf] text-white text-lg relative hover:scale-105 ease-in" href="#" id="apply">Apply Now</a>
+        <a class="cursor-default text-center bg-opacity-0 w-40 p-3 rounded-xl border-solid border-4 border-[#c9a5cf] text-white text-lg"  href="#" id="apply">Apply Now</a>
         <a class="cursor-pointer text-center fill-up-animation backdrop-blur tablet:bg-opacity-0 w-40 p-3 rounded-xl border-white border-solid border-4 text-white text-lg relative hover:scale-105 ease-in" href="#about">Learn More</a>
       </div>
-      <div class="flex text-center justify-center text-2xl w-full  tablet:w-auto tablet:pl-8 z-40 text-white">Registration opens in...</div>
+      <div class="flex text-center justify-center text-2xl w-full tablet:w-auto tablet:pl-8 z-40 text-white">Registration opens in...</div>
       <div class="flex justify-around px-0 w-full tablet:w-auto gap-4 tablet:pl-8 z-40" id="countdown">
         <Counter client:load/>
-        </div>
+      </div>
     </div>
 
     <!-- <div class="overflow-y-hidden absolute bottom-0 right-[10.3%] w-1/3 z-10">
@@ -251,7 +251,7 @@ import Counter from '../components/CountdownHero'
     mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 1) 30%, rgba(0, 0, 0, 0) 80%);
   }
 
-  @keyframes pulse {
+  /* @keyframes pulse {
   0% {
     transform: scale(1);
     
@@ -268,25 +268,25 @@ import Counter from '../components/CountdownHero'
 
 .pulse-animation {
   animation: pulse 2s ease-in-out infinite;
-}
+} */
 
 </style>
 
 <script>
-  document.addEventListener('DOMContentLoaded', () => {
-  const apply = document.querySelector('#apply');
-  const countdown = document.querySelector('#countdown');
+//   document.addEventListener('DOMContentLoaded', () => {
+//   const apply = document.querySelector('#apply');
+//   const countdown = document.querySelector('#countdown');
 
-  if (apply != null && countdown != null) {
-      apply.addEventListener('mouseover', () => {
-      countdown.classList.add('pulse-animation');
-    });
+//   if (apply != null && countdown != null) {
+//       apply.addEventListener('mouseover', () => {
+//       countdown.classList.add('pulse-animation');
+//     });
 
-    apply.addEventListener('mouseout', () => {
-      countdown.classList.remove('pulse-animation');
-    });
-  }
+//     apply.addEventListener('mouseout', () => {
+//       countdown.classList.remove('pulse-animation');
+//     });
+//   }
 
-});
+// });
 
 </script>
