@@ -33,7 +33,7 @@ export default function Header() {
 
   return (
     <header 
-      className="header fixed z-50 w-full flex flex-row items-center justify-end backdrop-blur-sm bg-gradient-to-b from-[#041D33] to-[#fff0] px-8 py-3 text-white"
+      className="header fixed z-[100] w-full flex flex-row items-center justify-end backdrop-blur-sm bg-gradient-to-b from-[#041D33] to-[#fff0] px-8 py-3 text-white"
     >
       <ul className="space-x-11 hidden min-[820px]:flex">
         {
