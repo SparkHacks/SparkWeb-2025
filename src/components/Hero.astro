@@ -251,7 +251,7 @@ import Counter from '../components/CountdownHero'
     mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 1) 30%, rgba(0, 0, 0, 0) 80%);
   }
 
-  /* @keyframes pulse {
+  @keyframes pulse {
   0% {
     transform: scale(1);
     
@@ -268,25 +268,25 @@ import Counter from '../components/CountdownHero'
 
 .pulse-animation {
   animation: pulse 2s ease-in-out infinite;
-} */
+}
 
 </style>
 
 <script>
-//   document.addEventListener('DOMContentLoaded', () => {
-//   const apply = document.querySelector('#apply');
-//   const countdown = document.querySelector('#countdown');
+  document.addEventListener('DOMContentLoaded', () => {
+  const apply = document.querySelector('#apply');
+  const countdown = document.querySelector('#countdown');
 
-//   if (apply != null && countdown != null) {
-//       apply.addEventListener('mouseover', () => {
-//       countdown.classList.add('pulse-animation');
-//     });
+  if (apply != null && countdown != null) {
+      apply.addEventListener('mouseover', () => {
+      countdown.classList.add('pulse-animation');
+    });
 
-//     apply.addEventListener('mouseout', () => {
-//       countdown.classList.remove('pulse-animation');
-//     });
-//   }
+    apply.addEventListener('mouseout', () => {
+      countdown.classList.remove('pulse-animation');
+    });
+  }
 
-// });
+});
 
 </script>
