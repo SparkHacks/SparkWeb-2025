@@ -22,7 +22,7 @@ export default function Header() {
     controls.start(isMenuOpen ? 'closed' : 'open');
   };
 
-  const handleApply = () => alert("Registration is not opened.")
+  const handleApply = () => window.open('https://dashboard.sparkhacks.org', "_blank");
 
   useEffect(() => {
     const html = document.querySelector("html");
