@@ -6,22 +6,24 @@ import rock from '../../public/whale/right-rock.svg'
 ---
 
 <section
-  class="relative flex justify-center pb-28 bg-[#024368] text-white"
+  class="relative  bg-[#024368] pb-28 text-white"
   id="information"
 >
-   <!-- <div class="break-group w-full">
-    <div class="whale-group">
-      <img class="whale animate-bob-sway-slow" src={whale.src} />
-      <img class="whale-robot animate-bob-sway-med" src={robot.src} />
+  <div class="break-group relative tablet:absolute">
+    <div class="whale-group w-full">
+      <img class="whale relative animate-bob-sway-slow w-[80%] tablet:w-[40%]" src={whale.src} />
+      <img class="whale-robot relative animate-bob-sway-med w-[20%] tablet:w-[10%]" src={robot.src} />
     </div>
     <img class="right-rock" src={rock.src} />
-  </div> -->
+  </div>
 
-  <div class="flex flex-wrap gap-x-20 gap-y-28 desktop:container px-4 tablet:px-[10%] desktop:px-[2%] " id="counter-faq">
-    
+  <div
+    class="relative z-50 flex justify-center w-full flex-wrap gap-x-20 gap-y-28 px-4 tablet:px-[10%] desktop:px-[2%]"
+    id="counter-faq"
+  >
     <div class="flex-auto px-[2%]" id="countdown">
-      <div class="flex justify-center items-center">
-        <h1 class="animate-bounce text-5xl mr-4">🌊</h1>
+      <div class="flex items-center justify-center">
+        <h1 class="mr-4 animate-bounce text-5xl">🌊</h1>
         <h1 class="font-poppin text-center text-5xl font-bold">
           Making Waves In...
         </h1>
@@ -30,12 +32,9 @@ import rock from '../../public/whale/right-rock.svg'
     </div>
 
     <div class="flex-auto px-[2%]">
-      <div class="flex justify-center items-center ">
-        <h1 class="animate-bounce text-5xl mr-4">💼
-        </h1>
-        <h1
-          class="font-poppin text-center text-5xl font-bold text-white "
-        >
+      <div class="flex items-center justify-center">
+        <h1 class="mr-4 animate-bounce text-5xl">💼</h1>
+        <h1 class="font-poppin text-center text-5xl font-bold text-white">
           Resources
         </h1>
       </div>
@@ -55,9 +54,7 @@ import rock from '../../public/whale/right-rock.svg'
   </div>
 </section>
 
-
-<!-- <style>
-
+<style>
   #chest {
     background: url('../chest.svg');
     width: 75px;
@@ -66,6 +63,14 @@ import rock from '../../public/whale/right-rock.svg'
     background-size: 75px;
   }
 
+  .break-group {
+    width: 100%;
+    min-width: 300px;
+    top: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
   .whale-group {
     display: flex;
     flex-direction: row;
@@ -74,20 +79,11 @@ import rock from '../../public/whale/right-rock.svg'
   }
 
   .whale {
-    position: relative;
-    width: 40%;
     left: -4%;
-    /* animation: bob 20s ease-out 0s infinite, sway 15s ease-in-out 1s infinite; */
-  }
-
-  .whale-robot {
-    position: relative;
-    width: 10%;
-    /* animation: bob 10s ease-out 1s infinite, sway 4s ease-in-out 0s infinite; */
   }
 
   .right-rock {
     width: 25%;
     right: 5%;
   }
-</style> -->
+</style>
