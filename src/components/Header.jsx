@@ -5,7 +5,7 @@ import { motion, useAnimation } from 'framer-motion';
 import styles from "./styles/Header.module.css"
 
 const links = [
-  { name: 'HackPack', href: '#', svg: "" },
+  { name: 'HackPack', href: 'https://youthful-mayflower-02b.notion.site/HackPack-2025-16c1bf81ade280e9b4f6ea19a572a181', svg: "" },
   { name: 'About', href: '#about', svg: "" },
   { name: 'Workshops', href: '#workshops', svg: ""},
   { name: 'Schedule', href: '#schedule', svg: "" },
