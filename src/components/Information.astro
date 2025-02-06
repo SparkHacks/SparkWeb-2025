@@ -40,24 +40,53 @@ import { motion } from "framer-motion";
         </h1 >
       </div>
 
-      <motion.div
-      initial={{  opacity: 0, y:20 }}
-      whileInView={{ opacity: 100, y:0 }}
-      transition={{ duration: 1 }}
-      viewport={{ once: true, amount: .5  }}
-      className="flex justify-center items-center" client:load>
-          <a
-          href="https://youthful-mayflower-02b.notion.site/HackPack-2025-16c1bf81ade280e9b4f6ea19a572a181"
-          target="_blank"
-          class="cursor-pointer mt-5 flex px-20 py-8 flex-col items-center justify-center bg-cover bg-[url('../faqback.svg')] backdrop-blur-[19.5px] rounded-[26.812px]"
-          >
-          <h1 class="font-poppin text-xl text-white text-center">Click to view</h1>
-          <h1 class="font-poppin text-3xl  font-poppin text-white">Hackpack</h1>
-            <!-- <h1 class="font-poppinl text-3xl text-white">🚧</h1> -->
+      <div class="flex flex-wrap justify-center gap-x-8">
+        <motion.div
+        initial={{  opacity: 0, y:20 }}
+        whileInView={{ opacity: 100, y:0 }}
+        transition={{ duration: 1 }}
+        viewport={{ once: true, amount: .5  }}
+        className="flex justify-center items-center group" client:load>
+            <a
+            href="https://youthful-mayflower-02b.notion.site/HackPack-2025-16c1bf81ade280e9b4f6ea19a572a181"
+            target="_blank"
+            class="cursor-pointer mt-5 flex px-16 py-8 flex-col items-center justify-center bg-cover bg-[url('../faqback.svg')] backdrop-blur-[19.5px] rounded-[26.812px]"
+            >
+            <h1 class="font-poppin text-xl text-white text-center">Click to view</h1>
+            <div class="flex items-center group-hover:scale-110">
+              <img class="h-[1.875rem] mr-3 inline " src="/notion.png">
+              <h1 class="font-poppin text-3xl  font-poppin text-white">Hackpack</h1>
+            </div>
 
-            <!-- <h1 class="font-poppin text-3xl text-white text-center">Under Construction</h1> -->
-          </a>
-        </motion.div>
+              <!-- <h1 class="font-poppinl text-3xl text-white">🚧</h1> -->
+  
+              <!-- <h1 class="font-poppin text-3xl text-white text-center">Under Construction</h1> -->
+            </a>
+          </motion.div>
+          <motion.div
+          initial={{  opacity: 0, y:20 }}
+          whileInView={{ opacity: 100, y:0 }}
+          transition={{ duration: 1 }}
+          viewport={{ once: true, amount: .5  }}
+          className="flex justify-center items-center group" client:load>
+              <a
+              href="https://youthful-mayflower-02b.notion.site/HackPack-2025-16c1bf81ade280e9b4f6ea19a572a181"
+              target="_blank"
+              class="cursor-pointer mt-5 flex px-16 py-8 flex-col items-center justify-center bg-cover bg-[url('../faqback.svg')] backdrop-blur-[19.5px] rounded-[26.812px]"
+              >
+              <h1 class="font-poppin text-xl text-white text-center">Click to Join</h1>
+              <div class="flex items-center group-hover:scale-110">
+                <img class="h-[1.875rem] mr-3 inline " src="/discord.png">
+                <h1 class="font-poppin text-3xl  font-poppin text-white">Discord</h1>
+              </div>
+  
+                <!-- <h1 class="font-poppinl text-3xl text-white">🚧</h1> -->
+    
+                <!-- <h1 class="font-poppin text-3xl text-white text-center">Under Construction</h1> -->
+              </a>
+            </motion.div>
+      </div>
+      
     </div>
   </div>
 </section>
